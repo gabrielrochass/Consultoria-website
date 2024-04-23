@@ -286,6 +286,18 @@ nav {
 
 
 /* estilo dos diferenciais*/
+.diferenciais-section {
+  padding: 50px 0;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
+
+#diferenciais-section h1 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
 .container {
   position: relative;
   display: flex;
