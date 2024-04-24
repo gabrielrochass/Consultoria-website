@@ -12,5 +12,16 @@ var swiper = new Swiper(".swiper", {
       slideShadows: true,
     },
     loop: true,
+     // Adicionando navegação por botões
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // Adicionando paginador
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
   });
   
