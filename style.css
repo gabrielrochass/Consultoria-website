@@ -9,16 +9,24 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  /* background-color: #9b8657; */
+  background-color: white;
+  color: #9b8657;
+}
+
+body .about-left .h1 {
+  color: wheat;
 }
 
 nav {
-  background-color: #ffffff;
-  color: #000000;
+  position: relative;
+  background-color: #9b8657;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px; /* Ajustando o espaçamento interno */
-  margin-top: 20px; /* Aumentando a distância da borda superior */
+  margin-top: 0px; /* Aumentando a distância da borda superior */
   margin-bottom: 20px; /* Aumentando a distância da borda inferior */
 }
 
@@ -34,7 +42,7 @@ nav {
 }
 
 .menu li a {
-  color: #000000;
+  color: white;
   text-decoration: none;
   padding: 10px 20px;
   position: relative;
@@ -68,20 +76,33 @@ nav {
 .about-left {
   flex: 1;
   margin-right: 20px;
+  padding-top: 20px;
+}
+
+.about-left h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.about-left p {
+  font-size: 1.1em;
+  margin-top: 20px;
 }
 
 .about-right {
   flex: 1;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+
 .card {
   position: relative;
-  width: 300px;
-  height: 200px;
-  background-color: #f9f9f9;
+  width: 350px;
+  height: 300px;
+  background-color: #9b8657;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease;
@@ -116,10 +137,12 @@ nav {
 }
 
 .card h3 {
-  color: #333;
-  font-size: 1.5em;
+  color: white;
+  font-size: 2em;
   margin-bottom: 10px;
 }
+
+
 
 #valores {
   padding: 50px 0;
@@ -128,9 +151,9 @@ nav {
 }
 
 #valores h1 {
-  color: #333;
-  font-size: 2em;
+  font-size: 2.7em;
   margin-bottom: 30px;
+  color: #9b8657;
 }
 
 .mural {
@@ -146,7 +169,7 @@ nav {
   width: 300px;
   margin: 20px;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #9b8657;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -161,14 +184,14 @@ nav {
 }
 
 .valor h2 {
-  color: #333;
+  color: white;
   font-size: 1.5em;
   margin-bottom: 10px;
 }
 
 .valor p {
-  color: #666;
-  font-size: 1.1em;
+  color: white;
+  font-size: 1em;
 }
 
 @keyframes fadeIn {
@@ -223,17 +246,22 @@ nav {
   font-size: 14px;
 }
 
+#diferenciais h1 {
+  font-size: 2.7em;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+}
+
 /* estilo dos diferenciais*/
 .diferenciais-section {
-  padding: 50px 0;
+  padding: 10px 0;
   text-align: center;
   animation: fadeInUp 1s ease forwards;
 }
 
 #diferenciais-section h1 {
-  color: #333;
-  font-size: 2em;
-  margin-bottom: 30px;
+  color: #9b8657;
+  font-size: 2.7em;
 }
 
 .container {
@@ -253,7 +281,7 @@ nav {
   width: 350px;
   max-width: 100%;
   height: 300px;
-  background: #FFF;
+  background: #9b8657;
   border-radius: 20px;
   transition: 0.5s;
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
@@ -266,7 +294,7 @@ nav {
   top: 20px;
   width: 300px;
   height: 220px;
-  background: #333;
+  background: white;
   border-radius: 12px;
   overflow: hidden;
   transition: 0.5s;
@@ -301,10 +329,10 @@ nav {
 .container .custom-card .custom-content h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #333333;
+  color: white;
 }
 .container .custom-card .custom-content p {
-  color: #333;
+  color: white;
 }
 .container .custom-card .custom-content a {
   position: relative;
@@ -350,7 +378,7 @@ nav {
 
 .serviço {
   width: 33.33%; /* Cada serviço ocupa 1/3 da largura do container do slideshow */
-  padding: 0 10px;
+  padding: 0 50px;
   box-sizing: border-box;
   text-align: center;
 }
@@ -404,174 +432,9 @@ nav {
 .swiper-button-next, .swiper-button-prev{
   color: #000000;
 }
-
-
-.main-section {
-  position: relative;
-  z-index: 3;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.main-container {
-  max-width: 1080px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.main-section-header {
-  margin-bottom: 50px;
+#footer {
+  background-color: #ffffff;
+  color: #000000;
   text-align: center;
-}
-
-.main-section-header h2 {
-  color: black;
-  font-weight: bold;
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-.main-section-header p {
-  color: black;
-}
-
-.main-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.contact-info-section {
-  width: 50%;
-}
-
-.contact-info-item {
-  display: flex;
-  margin-bottom: 30px;
-}
-
-.contact-info-icon {
-  height: 70px;
-  width: 70px;
-  background-color: #d4af37;
-  text-align: center;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contact-info-icon i {
-  font-size: 30px;
-  color: black;
-}
-
-.contact-info-content {
-  margin-left: 20px;
-}
-
-.contact-info-content h4 {
-  color: black;
-  font-size: 1.4em;
-  margin-bottom: 5px;
-  text-align: left;
-}
-
-.contact-info-content p {
-  color: black;
-  font-size: 1em;
-}
-
-.contact-form-section {
-  background-color: #d4af37;
-  padding: 40px;
-  width: 45%;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  border-radius: 10px;
-}
-
-.contact-form-section h2 {
-  font-weight: bold;
-  font-size: 2em;
-  margin-bottom: 10px;
-  color: black;
-}
-
-.input-container {
-  position: relative;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.input-container input,
-.input-container textarea {
-  width: 100%;
-  padding: 10px 15px;
-  font-size: 16px;
-  margin: 10px 0;
-  border: none;
-  border-radius: 5px;
-  background-color: #f5f5dc; /* Ajuste para um tom de ouro velho */
-  color: black;
-  outline: none;
-  resize: none;
-}
-
-.input-container span {
-  position: absolute;
-  left: 15px;
-  padding: 5px 0;
-  font-size: 16px;
-  margin: 10px 0;
-  pointer-events: none;
-  transition: 0.5s;
-  color: black;
-}
-
-.input-container input:focus~span,
-.input-container textarea:focus~span {
-  color: #f5f5dc;
-  padding: 0;
-  text-align: left;
-  font-size: 12px;
-  transform: translateY(-20px);
-}
-
-.input-container input[type="submit"] {
-  width: 100%;
-  background: #f5f5dc;
-  color: black;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  font-size: 18px;
-  border: 1px solid #d4af37;
-  transition: 0.5s;
-  border-radius: 5px;
-}
-
-.input-container input[type="submit"]:hover {
-  background: black;
-  color: #d4af37;
-}
-
-@media (max-width: 991px) {
-  .main-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  .main-row {
-    flex-direction: column;
-  }
-  .contact-info-section {
-    margin-bottom: 40px;
-    width: 100%;
-  }
-  .contact-form-section {
-    width: 100%;
-  }
+  padding: 20px 0;
 }
