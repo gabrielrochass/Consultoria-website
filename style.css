@@ -31,6 +31,7 @@ nav {
 }
 
 
+
 .menu {
   list-style-type: none;
   padding: 0;
@@ -259,7 +260,7 @@ nav {
 
 #diferenciais h1 {
   font-size: 2.7em;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   padding-bottom: 0;
 }
 
@@ -270,9 +271,11 @@ nav {
   animation: fadeInUp 1s ease forwards;
 }
 
-#diferenciais-section h1 {
-  color: white;
-  /* font-size: 2.7em; */
+
+#servicos h1 {
+  font-size: 2.7em;
+  margin-bottom: 5px;
+  padding-bottom: 0;
 }
 
 .container {
