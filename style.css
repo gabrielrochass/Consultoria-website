@@ -50,17 +50,22 @@ nav {
 }
 
 .menu li a:hover {
-  color: #797921;
+  color: #E7DCC9;
 }
 
-.menu li a:hover::after {
+.menu li a::after {
   content: '';
   position: absolute;
   left: 0;
   bottom: -5px;
-  width: 100%;
+  width: 0;
   height: 2px;
   background-color: #fff;
+  transition: width 0.3s ease; /* Adicionando transição para suavizar a animação */
+}
+
+.menu li a:hover::after {
+  width: 100%; /* Alterando a largura para 100% ao passar o mouse */
 }
 
 .about {
@@ -215,6 +220,9 @@ nav {
       transform: translateY(0);
   }
 }
+
+
+
 #serviços {
   text-align: center;
   padding: 50px 20px;
@@ -265,12 +273,21 @@ nav {
 }
 
 /* estilo dos diferenciais*/
-.diferenciais-section {
-  padding: 10px 0;
+.services-section {
+  padding: 5px 0;
   text-align: center;
   animation: fadeInUp 1s ease forwards;
 }
 
+.dif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 100px 50px;
+  animation: fadeInUp 1s ease forwards;
+}
 
 #servicos h1 {
   font-size: 2.7em;
@@ -286,6 +303,7 @@ nav {
   flex-wrap: wrap;
   gap: 100px 50px;
   padding: 100px 50px;
+  animation: fadeInUp 2s ease forwards;
 }
 .container .custom-card {
   position: relative;
@@ -301,7 +319,7 @@ nav {
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
 }
 .container .custom-card:hover {
-  height: 285px;
+  height: 350px;
 }
 .container .custom-card .img-box {
   position: absolute;
@@ -376,4 +394,47 @@ nav {
   .container .custom-card .custom-content a {
       font-size: 0.9rem;
   }
+}
+
+/* Estilo para a nova seção de diferenciais */
+.diferenciais-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.diferencial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.dif-text {
+  flex: 1;
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.dif-text h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.dif-text p {
+  font-size: 1.1em;
+}
+
+.dif-img {
+  flex: 1;
+}
+
+.dif-img img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+  border-radius: 10px; /* Borda arredondada para a imagem */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para efeito de elevação */
+  transition: transform 0.3s ease; /* Adiciona transição suave para a animação */
+}
+
+/* Efeito de escala ao passar o mouse sobre a imagem */
+.dif-img img:hover {
+  transform: scale(1.1);
 }
