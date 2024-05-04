@@ -10,6 +10,10 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
   /* background-color: #9b8657; */
+  background-image: url('images/fundo-claro.png');
+  background-repeat: repeat; /* Para repetir a imagem vertical e horizontalmente */
+  background-size: cover; 
+  background-position: center; /* Para centralizar a imagem de fundo */
   background-color: white;
   color: #9b8657;
 }
@@ -17,6 +21,13 @@ body {
 body .about-left .h1 {
   color: wheat;
 }
+
+.logo img {
+  max-width: 90px; /* Defina o valor máximo que deseja para a largura da logo */
+  height: auto; /* Isso garante que a altura seja ajustada automaticamente para manter a proporção original */
+  border-radius: 20px; /* Adicionando bordas arredondadas */
+}
+
 
 nav {
   position: relative;
@@ -158,7 +169,8 @@ nav {
 
 #valores h1 {
   font-size: 2.7em;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  margin-top:   50px;
   color: #9b8657;
 }
 
@@ -193,6 +205,7 @@ nav {
   color: white;
   font-size: 1.5em;
   margin-bottom: 10px;
+  margin-top: -50px;
 }
 
 .valor p {
@@ -219,6 +232,17 @@ nav {
       opacity: 1;
       transform: translateY(0);
   }
+}
+
+
+.emoji {
+  position: relative;
+  top: -30px; /* Ajuste a altura conforme necessário */
+  left: 30%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  z-index: 1; 
+  color: #E7DCC9;
+  font-size: 2em;
 }
 
 
@@ -359,7 +383,7 @@ nav {
   height: 250px;
 }
 .container .custom-card .custom-content h2 {
-  font-size: 1.5rem;
+  font-size: 1.3  rem;
   font-weight: 700;
   color: white;
 }
@@ -442,5 +466,4 @@ nav {
 .gallery-item img {
   width: 100%;
   height: auto;
-  transform: rotate(45deg); /* Rotacionando as imagens em 45 graus */
 }
