@@ -468,10 +468,24 @@ nav {
   height: auto;
 }
 
+
+
 .contact-section {
   padding: 50px 20px;
   text-align: center;
 }
+
+#contato {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#contato h1 {
+  font-size: 2.7em;
+  margin-bottom: 80px;
+  color: #9b8657;
+}
+
 
 .contact-content {
   display: flex;
@@ -497,6 +511,8 @@ nav {
 .contact-info .info-item {
   display: flex;
   align-items: center;
+  margin-bottom: 40px;
+  margin-left: 30px;
 }
 
 .contact-info .info-item i {
@@ -509,18 +525,19 @@ nav {
 }
 
 .contact-form h2 {
-  font-size: 1.8em;
+  font-size: 2em;
   margin-bottom: 20px;
 }
 
 .contact-form form input,
 .contact-form form textarea {
-  width: 100%;
-  padding: 10px;
+  width: 95%;
+  padding: 12px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 
 .contact-form form button {
   background-color: #9b8657;
@@ -529,6 +546,9 @@ nav {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1em;
+  /* alinhar na direita */
+  margin-left: 460px;
 }
 
 .contact-form form button:hover {
