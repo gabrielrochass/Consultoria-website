@@ -558,5 +558,57 @@ nav {
 .contact-form form button:hover {
   background-color: #7e6e49;
 }
+/* Estilo para o rodapé */
+.bt_bb_port {
+  background-color: #9b8657; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  padding: 50px 0; 
+}
 
+.bt_bb_row.linha-rodape {
+  display: flex; /* Exibir os itens em linha */
+  justify-content: space-between; 
+}
 
+.bt_bb_column.col-xxl-3 {
+  text-align: left; /* Centraliza o conteúdo */
+  flex: 1; /* Crescer para ocupar todo o espaço disponível */
+}
+
+.bt_bb_headline_tag span {
+  font-size: 20px; /* Tamanho da fonte dos títulos */
+  /* font-weight: bold; Peso da fonte */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+.bt_bb_custom_menu ul {
+  list-style: none; 
+  padding: 0; /* Remove o espaçamento interno */
+}
+
+.bt_bb_custom_menu ul li {
+  margin-bottom: 50px; /* Espaçamento entre os itens */
+}
+
+.bt_bb_custom_menu ul li a {
+  color: #fff; /* Cor do texto dos links */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  transition: color 0.3s; /* Transição suave da cor do texto */
+}
+
+.bt_bb_custom_menu ul li a:hover {
+  color: #ccc; /* Cor do texto dos links ao passar o mouse */
+}
+
+.bt_bb_separator {
+  margin-bottom: 20px; /* Espaçamento entre os elementos separados */
+}
+
+.bt_bb_icon {
+  margin-right: 10px; /* Espaçamento à direita dos ícones */
+  font-size: 20px; /* Tamanho dos ícones */
+}
+
+.telefone-hover:hover {
+  color: #fff; /* Cor do texto do telefone ao passar o mouse */
+}
