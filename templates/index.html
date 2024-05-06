@@ -176,12 +176,18 @@
       </div>
       <div class="contact-form">
         <h2>Envie uma mensagem</h2>
-        <form>
+        <form method="post" enctype="multipart/form-data" action="/upload">
           <input type="text" name="nome" placeholder="Nome" required>
           <input type="email" name="email" placeholder="E-mail" required>
           <textarea name="mensagem" placeholder="Mensagem" required></textarea>
-          <button type="submit">Enviar</button>
+          <label for="file-upload-cv" class="upload-btn">Selecionar Currículo</label>
+          <input id="file-upload-cv" class="upload-input" type="file" name="file" accept=".pdf, .doc, .docx">
+          <!-- <label for="file-upload-proposta" class="upload-btn">Selecionar Proposta</label> -->
+          <!-- <input id="file-upload-proposta" class="upload-input" type="file" name="file" accept=".pdf, .doc, .docx"> -->
+          <button type="submit" name="submit" value="proposta">Enviar Proposta</button>
+          <button type="submit" name="submit" value="curriculo">Enviar Currículo</button>
         </form>
+        
       </div>
     </div>
   </div>

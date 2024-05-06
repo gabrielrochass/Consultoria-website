@@ -549,11 +549,14 @@ nav {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 0.95em;
+  
   /* alinhar na direita */
-  margin-right: 460px;
+  /* margin-right: 460px; */
 }
 
 .contact-form form button:hover {
   background-color: #7e6e49;
 }
+
+
