@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Souza Monteiro Consultoria</title>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="main.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 <body>
   <nav>
     <div class="logo">
-      <img src="images/logo.png" alt="Logo">
+      <img src="static/images/logo.png" alt="Logo">
     </div>
     <ul class="menu">
       <li><a href="#home">Home</a></li>
@@ -74,13 +74,13 @@
       <div class="dif-img">
         <div class="gallery">
           <div class="gallery-item">
-            <img src="images/adm.webp" alt="Imagem 1">
+            <img src="static/images/adm.webp" alt="Imagem 1">
           </div>
           <div class="gallery-item">
-            <img src="images/contrato.jpg" alt="Imagem 2">
+            <img src="static/images/contrato.jpg" alt="Imagem 2">
           </div>
           <div class="gallery-item">
-            <img src="images/limpeza.jpg" alt="Imagem 3">
+            <img src="static/images/limpeza.jpg" alt="Imagem 3">
           </div>
           <!-- Adicione mais imagens conforme necessário -->
         </div>
@@ -102,42 +102,42 @@
     <h1>Nossos Serviços</h1>
     <div class="container">
       <div class="custom-card">
-        <div class="img-box"><img src="images/contrato.jpg"></div>
+        <div class="img-box"><img src="static/images/contrato.jpg"></div>
         <div class="custom-content">
           <h2>Consultoria em gestão empresarial</h2>
           <p>Oferecemos consultoria especializada em gestão empresarial para melhorar a eficiência e a rentabilidade do seu negócio.</p>
         </div>
       </div>
       <div class="custom-card">
-        <div class="img-box"><img src="images/limpeza.jpg"></div>
+        <div class="img-box"><img src="static/images/limpeza.jpg"></div>
         <div class="custom-content">
           <h2>Limpeza e Conservação</h2>
           <p>Oferecemos serviços de limpeza predial e hospitalar, incluindo limpeza pós-obra para garantir um ambiente limpo e saudável.</p>
         </div>
       </div>
       <div class="custom-card">
-        <div class="img-box"><img src="images/portaria.jpg"></div>
+        <div class="img-box"><img src="static/images/portaria.jpg"></div>
         <div class="custom-content">
           <h2>Portaria</h2>
           <p>Contamos com profissionais qualificados para oferecer serviços de portaria e controle de acesso, garantindo a segurança do seu estabelecimento.</p>
         </div>
       </div>
       <div class="custom-card">
-        <div class="img-box"><img src="images/predial.jpg"></div>
+        <div class="img-box"><img src="static/images/predial.jpg"></div>
         <div class="custom-content">
           <h2>Manutenção Predial</h2>
           <p>Nossos serviços de manutenção predial incluem reparos elétricos e hidráulicos para manter seu edifício em perfeitas condições.</p>
         </div>
       </div>
       <div class="custom-card">
-        <div class="img-box"><img src="images/transferir.jpg"></div>
+        <div class="img-box"><img src="static/images/transferir.jpg"></div>
         <div class="custom-content">
           <h2>Jardinagem e Paisagismo</h2>
           <p>Oferecemos manutenção de jardins e áreas verdes para garantir um ambiente agradável e bem-cuidado em sua propriedade.</p>
         </div>
       </div>
       <div class="custom-card">
-        <div class="img-box"><img src="images/adm.webp"></div>
+        <div class="img-box"><img src="static/images/adm.webp"></div>
         <div class="custom-content">
           <h2>Serviços Administrativos</h2>
           <p>Contamos com uma equipe de profissionais capacitados para oferecer serviços administrativos, incluindo recepcionistas, digitalização de documentos e apoio logístico.</p>
