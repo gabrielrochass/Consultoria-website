@@ -1,6 +1,7 @@
+// aqui é somente a raiz do projeto
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './componentes/App';
+import App from './App';
 import './style.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
