@@ -10,6 +10,10 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
   /* background-color: #9b8657; */
+  background-image: url('images/fundo-claro.png');
+  background-repeat: repeat; /* Para repetir a imagem vertical e horizontalmente */
+  background-size: cover; 
+  background-position: center; /* Para centralizar a imagem de fundo */
   background-color: white;
   color: #9b8657;
 }
@@ -17,6 +21,13 @@ body {
 body .about-left .h1 {
   color: wheat;
 }
+
+.logo img {
+  max-width: 90px; /* Defina o valor máximo que deseja para a largura da logo */
+  height: auto; /* Isso garante que a altura seja ajustada automaticamente para manter a proporção original */
+  border-radius: 50%; /* Adicionando bordas arredondadas */
+}
+
 
 nav {
   position: relative;
@@ -29,6 +40,7 @@ nav {
   margin-top: 0px; /* Aumentando a distância da borda superior */
   margin-bottom: 20px; /* Aumentando a distância da borda inferior */
 }
+
 
 
 .menu {
@@ -49,17 +61,22 @@ nav {
 }
 
 .menu li a:hover {
-  color: #797921;
+  color: #E7DCC9;
 }
 
-.menu li a:hover::after {
+.menu li a::after {
   content: '';
   position: absolute;
   left: 0;
   bottom: -5px;
-  width: 100%;
+  width: 0;
   height: 2px;
   background-color: #fff;
+  transition: width 0.3s ease; /* Adicionando transição para suavizar a animação */
+}
+
+.menu li a:hover::after {
+  width: 100%; /* Alterando a largura para 100% ao passar o mouse */
 }
 
 .about {
@@ -152,7 +169,8 @@ nav {
 
 #valores h1 {
   font-size: 2.7em;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  margin-top:   50px;
   color: #9b8657;
 }
 
@@ -187,6 +205,7 @@ nav {
   color: white;
   font-size: 1.5em;
   margin-bottom: 10px;
+  margin-top: -50px;
 }
 
 .valor p {
@@ -214,20 +233,39 @@ nav {
       transform: translateY(0);
   }
 }
+
+
+.emoji {
+  position: relative;
+  top: -30px; /* Ajuste a altura conforme necessário */
+  left: 30%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  z-index: 1; 
+  color: #E7DCC9;
+  font-size: 2em;
+}
+
+
+
 #serviços {
   text-align: center;
   padding: 50px 20px;
 }
 
 #serviços h1 {
-  margin-bottom: 30px;
+  font-size: 2.7em;
+  margin-bottom: 20px;
+  padding-bottom: 0;
 }
 
-.swiper .swiper-slide {
-  background-position: center;
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-size: cover;
-  width: 200px;
-  height: 260px;
+  background-position: center;
+  width: 100%;
+  height: 300px;
 }
 
 .content {
@@ -240,28 +278,45 @@ nav {
 
 .content h2 {
   margin-bottom: 10px;
+  font-size: 1.5em;
 }
 
 .content p {
-  font-size: 14px;
+  font-size: 1em;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000000;
 }
 
 #diferenciais h1 {
   font-size: 2.7em;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   padding-bottom: 0;
 }
 
 /* estilo dos diferenciais*/
-.diferenciais-section {
-  padding: 10px 0;
+.services-section {
+  padding: 5px 0;
   text-align: center;
   animation: fadeInUp 1s ease forwards;
 }
 
-#diferenciais-section h1 {
-  color: #9b8657;
+.dif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 100px 50px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+#servicos h1 {
   font-size: 2.7em;
+  margin-bottom: 5px;
+  padding-bottom: 0;
 }
 
 .container {
@@ -272,6 +327,7 @@ nav {
   flex-wrap: wrap;
   gap: 100px 50px;
   padding: 100px 50px;
+  animation: fadeInUp 2s ease forwards;
 }
 .container .custom-card {
   position: relative;
@@ -287,7 +343,7 @@ nav {
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
 }
 .container .custom-card:hover {
-  height: 285px;
+  height: 350px;
 }
 .container .custom-card .img-box {
   position: absolute;
@@ -327,7 +383,7 @@ nav {
   height: 250px;
 }
 .container .custom-card .custom-content h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: white;
 }
@@ -364,77 +420,195 @@ nav {
   }
 }
 
-/* Estilos para o slideshow de serviços */
-
-.slideshow-container {
-  position: relative;
-  max-width: 1000px; /* Defina o tamanho máximo do slideshow */
-  margin: auto;
+.dif {
+  padding: 50px 20px;
+  text-align: center;
 }
 
-.slides {
+.dif h1 {
+  margin-bottom: 30px;
+}
+
+.dif-content {
   display: flex;
+  gap: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px; /* Definindo uma largura máxima para o conteúdo */
 }
 
-.serviço {
-  width: 33.33%; /* Cada serviço ocupa 1/3 da largura do container do slideshow */
-  padding: 0 50px;
-  box-sizing: border-box;
-  text-align: center;
+.dif-text {
+  text-align: left;
+  flex: 1;
 }
 
-.serviço img {
+.dif-img {
+  flex: 1;
+}
+
+/* Estilo para a galeria de imagens */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start; /* Alinhando a galeria à esquerda */
+  position: relative;
+  z-index: 1;
+}
+
+.gallery-item {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-item img {
   width: 100%;
-  border-radius: 10px; /* Arredonde as bordas da imagem */
-}
-
-.serviço h2 {
-  margin-top: 10px;
-  font-size: 18px;
-}
-
-.serviço p {
-  font-size: 14px;
-}
-
-/* Estilos para as setas de navegação */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.3s ease;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
+  height: auto;
 }
 
 
-.swiper-pagination-bullet {
-  background-color: #ffffff;
-}
 
-.swiper-button-next, .swiper-button-prev{
-  color: #000000;
-}
-#footer {
-  background-color: #ffffff;
-  color: #000000;
+.contact-section {
+  padding: 50px 20px;
   text-align: center;
-  padding: 20px 0;
+}
+
+#contato {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#contato h1 {
+  font-size: 2.7em;
+  margin-bottom: 80px;
+  color: #9b8657;
+}
+
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1200px; /* Ajuste conforme necessário */
+}
+
+.contact-info {
+  flex: 1;
+  text-align: left;
+  margin-right: 20px; /* Ajuste conforme necessário */
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 600px;
+}
+
+.contact-info .info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  margin-left: 30px;
+}
+
+.contact-info .info-item i {
+  margin-right: 10px;
+  font-size: 1.5em;
+}
+
+.contact-info .info-item p {
+  font-size: 1.2em;
+}
+
+.contact-form h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  /* text-align: left; */
+  margin-right: 180px;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+  width: 95%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: left;
+}
+
+
+.contact-form form button {
+  background-color: #9b8657;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95em;
+  
+  /* alinhar na direita */
+  /* margin-right: 460px; */
+}
+
+.contact-form form button:hover {
+  background-color: #7e6e49;
+}
+/* Estilo para o rodapé */
+.bt_bb_port {
+  background-color: #9b8657; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  padding: 50px 0; 
+}
+
+.bt_bb_row.linha-rodape {
+  display: flex; /* Exibir os itens em linha */
+  justify-content: space-between; 
+}
+
+.bt_bb_column.col-xxl-3 {
+  text-align: left; /* Centraliza o conteúdo */
+  flex: 1; /* Crescer para ocupar todo o espaço disponível */
+}
+
+.bt_bb_headline_tag span {
+  font-size: 20px; /* Tamanho da fonte dos títulos */
+  /* font-weight: bold; Peso da fonte */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+.bt_bb_custom_menu ul {
+  list-style: none; 
+  padding: 0; /* Remove o espaçamento interno */
+}
+
+.bt_bb_custom_menu ul li {
+  margin-bottom: 50px; /* Espaçamento entre os itens */
+}
+
+.bt_bb_custom_menu ul li a {
+  color: #fff; /* Cor do texto dos links */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  transition: color 0.3s; /* Transição suave da cor do texto */
+}
+
+.bt_bb_custom_menu ul li a:hover {
+  color: #ccc; /* Cor do texto dos links ao passar o mouse */
+}
+
+.bt_bb_separator {
+  margin-bottom: 20px; /* Espaçamento entre os elementos separados */
+}
+
+.bt_bb_icon {
+  margin-right: 10px; /* Espaçamento à direita dos ícones */
+  font-size: 20px; /* Tamanho dos ícones */
+}
+
+.telefone-hover:hover {
+  color: #fff; /* Cor do texto do telefone ao passar o mouse */
 }
