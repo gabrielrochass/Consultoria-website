@@ -1,4 +1,4 @@
-// aqui é somente a raiz do projeto
+// usa a raiz do projeto -> n mexe
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';

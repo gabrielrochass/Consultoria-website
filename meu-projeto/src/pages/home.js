@@ -1,1 +1,1 @@
-// aqui vão as rotas
+// aqui vão os componentes react de src/componentes organizados entre si
