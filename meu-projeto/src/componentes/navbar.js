@@ -1,17 +1,43 @@
 // navbar para navegação entre páginas
-import React from 'react';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import './styleComponents.css'
 
-function Navbar() {
+export default function Navbar() {
     return (
         <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/sobre">Sobre</a></li>
-            <li><a href="/servicos">Serviços</a></li>
-            <li><a href="/contato">Contato</a></li>
-        </ul>
-        </nav>
-    );
-}
+            {/* logo e nome da empresa na esquerda */}
+            <div className="navbar-left">
+                <div className="logo">
+                    <Link to="/">
+                        <img src="https://via.placeholder.com/150" alt="logo" />
+                    </Link>
+                </div>
 
-export default Navbar;
+                <div className="nome-da-empresa">
+                    <h1>SM Terceirização e Serviços</h1>
+                </div>
+            </div>
+
+            <div className="navbar-right">
+                <ul className="nav-links">
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/servicos">Serviços</Link>
+                    </li>
+                    <li>
+                        <Link to="/sobre">Sobre</Link>
+                    </li>
+                    <li>
+                        <Link to="/contato">
+                            <button className="navbar-button">Contato</button>
+                        </Link>
+                    </li>
+                </ul>
+            </div>
+                
+        </nav>
+    )
+}
