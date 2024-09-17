@@ -1,0 +1,83 @@
+#valores {
+    padding: 50px 0;
+    text-align: center;
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  #valores h1 {
+    font-size: 2.7em;
+    margin-bottom: 50px;
+    margin-top:   50px;
+    color: #9b8657;
+  }
+  
+  .mural {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .valor {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #9b8657;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.3s;
+    transition: transform 0.3s ease;
+  }
+  
+  .valor:hover {
+    transform: translateY(-5px);
+  }
+  
+  .valor h2 {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    margin-top: -50px;
+  }
+  
+  .valor p {
+    color: white;
+    font-size: 1em;
+  }
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  
+  
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  
+  .emoji {
+    position: relative;
+    top: -45px; /* Ajuste a altura conforme necessário */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    z-index: 1; 
+    color: #E7DCC9;
+    font-size: 3em;
+  }
