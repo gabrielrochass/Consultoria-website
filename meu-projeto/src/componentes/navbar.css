@@ -1,0 +1,56 @@
+.logo img {
+    max-width: 90px; /* Defina o valor máximo que deseja para a largura da logo */
+    height: auto; /* Isso garante que a altura seja ajustada automaticamente para manter a proporção original */
+    border-radius: 50%; /* Adicionando bordas arredondadas */
+  }
+  
+  
+  nav {
+    position: relative;
+    background-color: #9b8657;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Ajustando o espaçamento interno */
+    margin-top: 0px; /* Aumentando a distância da borda superior */
+    margin-bottom: 20px; /* Aumentando a distância da borda inferior */
+  }
+  
+  
+  
+  .menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu li {
+    display: inline;
+  }
+  
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    position: relative;
+  }
+  
+  .menu li a:hover {
+    color: #E7DCC9;
+  }
+  
+  .menu li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease; /* Adicionando transição para suavizar a animação */
+  }
+  
+  .menu li a:hover::after {
+    width: 100%; /* Alterando a largura para 100% ao passar o mouse */
+  }
