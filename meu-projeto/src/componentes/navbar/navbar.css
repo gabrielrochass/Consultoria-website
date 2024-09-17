@@ -54,3 +54,9 @@
   .menu li a:hover::after {
     width: 100%; /* Alterando a largura para 100% ao passar o mouse */
   }
+
+  .nome-navbar {
+    margin-left: 0px;
+    display: flex;
+    align-items: left;
+  }
