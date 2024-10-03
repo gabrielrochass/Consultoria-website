@@ -1,30 +1,34 @@
-import React from 'react'
-import './sobre.css'
+import React from 'react';
+import './sobre.css'; // Arquivo CSS atualizado para estilização
 
-const Sobre = () => {
+const sobre = () => {
   return (
-    <div id="sobre" className="about">
-      <div className="about-left">
-        <h1>Sobre Nós</h1>
-        <p>Na SM Terceirização & Serviços LTDA, combinamos tradição com inovação para oferecer soluções de terceirização que realmente fazem a diferença.</p>
-        <p>Seus objetivos estão embasados na redução de custos operacionais com foco no Core Business do Cliente o que reflete nossa dedicação à qualidade duradoura e ao serviço excepcional.</p>
-      </div>
-      <div className="about-right">
-        <div className="card">
-          <div className="front">
-            <i className="fas fa-bullseye"></i>
-            <h3>Missão</h3>
+    <section className="sobre-nos">
+      <div className="container">
+        <div className="content">
+          {/* Texto sobre a empresa */}
+          <div className="text-content">
+            <h2>Sobre Nós</h2>
+            <p>
+              A [Nome da Empresa] é uma empresa de terceirização especializada em oferecer soluções eficientes e de qualidade
+              em diversos setores. Com uma história de sucesso desde [ano de fundação], nos destacamos pelo compromisso com 
+              a inovação, ética e responsabilidade social. Nosso time é formado por especialistas dedicados que garantem
+              a excelência em cada projeto.
+            </p>
+            <p>
+              Nosso objetivo é ser a principal escolha no mercado de terceirização, oferecendo serviços personalizados para
+              atender às necessidades específicas de cada cliente. Valorizamos a transparência, o respeito e a satisfação do cliente.
+            </p>
           </div>
-          <div className="back">
-            <div className="back-content">
-              <h3>Missão</h3>
-              <p>Prover soluções de terceirização e serviços que exemplifiquem qualidade, resistência e perseverança, assegurando que nossos clientes possam focar em suas competências essenciais com total confiança na nossa entrega.</p>
-            </div>
+
+          {/* Imagem ao lado direito */}
+          <div className="image-content">
+            <img src="[url-da-imagem]" alt="Sobre Nós - [Nome da Empresa]" />
           </div>
         </div>
       </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
-export default Sobre
+export default sobre;
