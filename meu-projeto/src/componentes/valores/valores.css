@@ -1,83 +1,102 @@
 #valores {
-    padding: 50px 0;
-    text-align: center;
-    animation: fadeInUp 1s ease forwards;
-  }
-  
-  #valores h1 {
-    font-size: 2.7em;
-    margin-bottom: 50px;
-    margin-top:   50px;
-    color: #9b8657;
-  }
-  
-  .mural {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  padding: 60px 20px;
+  background-color: #f7f7f7;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
+
+#valores h1 {
+  font-size: 3em;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  color: #6b5630;
+  font-weight: 700;
+}
+
+.mural {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Garante que os cartões tenham a mesma altura */
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.valor {
+  width: 280px;
+  margin: 20px;
+  padding: 30px 20px;
+  background-color: #6b5630;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.3s;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+}
+
+.valor:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.valor h2 {
+  color: #fff;
+  font-size: 1.6em;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.valor p {
+  color: #f0e9d5;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.emoji {
+  position: relative;
+  top: -40px; /* Ajustado para um espaçamento melhor */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  color: #E7DCC9;
+  font-size: 3em;
+  margin-bottom: -40px;
+}
+
+@keyframes fadeIn {
+  from {
     opacity: 0;
-    animation: fadeIn 1s ease forwards;
   }
-  
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Melhorias de responsividade */
+@media (max-width: 768px) {
   .valor {
-    width: 300px;
-    margin: 20px;
-    padding: 20px;
-    background-color: #9b8657;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    opacity: 0;
-    animation: fadeIn 1s ease forwards;
-    animation-delay: 0.3s;
-    transition: transform 0.3s ease;
+    width: 100%; /* Torna os cartões responsivos em telas menores */
+    margin: 10px 0;
   }
-  
-  .valor:hover {
-    transform: translateY(-5px);
+}
+
+@media (max-width: 1200px) {
+  .mural {
+    flex-direction: column;
   }
-  
-  .valor h2 {
-    color: white;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    margin-top: -50px;
-  }
-  
-  .valor p {
-    color: white;
-    font-size: 1em;
-  }
-  
-  @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-  }
-  
-  
-  @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-  }
-  
-  
-  .emoji {
-    position: relative;
-    top: -45px; /* Ajuste a altura conforme necessário */
-    left: 50%;
-    transform: translateX(-50%); /* Centraliza horizontalmente */
-    z-index: 1; 
-    color: #E7DCC9;
-    font-size: 3em;
-  }
+}
