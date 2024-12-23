@@ -38,6 +38,7 @@ nav {
 
 .menu li {
   display: inline;
+  font-size: 1.2rem;
 }
 
 .menu li a {
