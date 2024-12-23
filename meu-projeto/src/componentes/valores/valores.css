@@ -9,7 +9,6 @@
   margin-bottom: 60px;
   font-size: 3em;
   text-align: center;
-  text-transform: uppercase;
   letter-spacing: 2px;
   border-bottom: 3px solid #e5b141;
   display: inline-block;
@@ -24,13 +23,22 @@
   padding-left: 20px;
 }
 
+#valores .valores {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0px;
+  border-left: 4px solid #e5b141;
+  padding-left: 20px;
+}
+
 #valores .visao {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 40px;
-  border-left: 4px solid #e5b141;
-  padding-left: 20px;
+  border-right: 4px solid #e5b141; /* Mover a linha para o lado direito */
+  padding-right: 20px; /* Ajustando o padding para dar espaço */
+  text-align: right; /* Alinha o conteúdo à direita */
 }
 
 #valores .visao h2 {
@@ -42,7 +50,7 @@
   color: #444;
   margin-bottom: 20px;
   font-size: 2.5em;
-  margin-right: 20px;
+  margin-right: 10px;
   text-transform: capitalize;
   position: relative;
 }
@@ -61,5 +69,4 @@
   line-height: 1.8;
   font-size: 1.2em;
   margin-bottom: 20px;
-  color: #555;
 }
