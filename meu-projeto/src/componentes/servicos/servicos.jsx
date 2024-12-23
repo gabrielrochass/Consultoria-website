@@ -8,7 +8,7 @@ const Servicos = () => {
             <div className="container">
                 <div className="custom-card">
                     <div className="img-box">
-                        <img src={require('../../assets/limpeza.jpg')} alt="Consultoria em gestão empresarial" />
+                        <img src={require('../../assets/consultoria.png')} alt="Consultoria em gestão empresarial" />
                     </div>
                     <div className="custom-content">
                         <h2>Consultoria Empresarial</h2>
@@ -26,7 +26,7 @@ const Servicos = () => {
                 </div>
                 <div className="custom-card">
                     <div className="img-box">
-                    <img src={require('../../assets/limpeza.jpg')} alt="Portaria" />
+                    <img src={require('../../assets/portaria.jpg')} alt="Portaria" />
                     </div>
                     <div className="custom-content">
                         <h2>Portaria</h2>
@@ -35,7 +35,7 @@ const Servicos = () => {
                 </div>
                 <div className="custom-card">
                     <div className="img-box">
-                    <img src={require('../../assets/limpeza.jpg')} alt="Manutenção Predial" />
+                    <img src={require('../../assets/limpeza-predial.jpg')} alt="Manutenção Predial" />
                     </div>
                     <div className="custom-content">
                         <h2>Manutenção Predial</h2>
@@ -44,7 +44,7 @@ const Servicos = () => {
                 </div>
                 <div className="custom-card">
                     <div className="img-box">
-                        <img src={require('../../assets/limpeza.jpg')} alt="Jardinagem e Paisagismo" />
+                        <img src={require('../../assets/jardinagem.jpg')} alt="Jardinagem e Paisagismo" />
                     </div>
                     <div className="custom-content">
                         <h2>Jardinagem e Paisagismo</h2>
@@ -53,7 +53,7 @@ const Servicos = () => {
                 </div>
                 <div className="custom-card">
                     <div className="img-box">
-                        <img src={require('../../assets/limpeza.jpg')} alt="Serviços Administrativos" />
+                        <img src={require('../../assets/adm.jpg')} alt="Serviços Administrativos" />
                     </div>
                     <div className="custom-content">
                         <h2>Serviços Administrativos</h2>
