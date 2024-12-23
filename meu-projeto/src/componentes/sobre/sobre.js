@@ -23,7 +23,7 @@ const sobre = () => {
 
           {/* Imagem ao lado direito */}
           <div className="image-content">
-            <img src="[url-da-imagem]" alt="Sobre Nós - [Nome da Empresa]" />
+            <img src={require('../../assets/limpeza-predial.jpg')} alt="Sobre Nós" />
           </div>
         </div>
       </div>
