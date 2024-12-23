@@ -1,102 +1,43 @@
 #valores {
-  padding: 60px 20px;
-  background-color: #f7f7f7;
-  text-align: center;
-  animation: fadeInUp 1s ease forwards;
+  padding: 60px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #valores h1 {
-  font-size: 3em;
-  margin-bottom: 40px;
-  margin-top: 30px;
-  color: #6b5630;
-  font-weight: 700;
+  color: #333;
+  margin-bottom: 60px;
+  font-size: 2.5em;
 }
 
-.mural {
+#valores .missao, #valores .valores {
   display: flex;
-  justify-content: center;
-  align-items: stretch; /* Garante que os cartões tenham a mesma altura */
-  flex-wrap: wrap;
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
+  align-items: flex-start;
+  margin-bottom: 40px;
 }
 
-.valor {
-  width: 280px;
-  margin: 20px;
-  padding: 30px 20px;
-  background-color: #6b5630;
-  border-radius: 12px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-  text-align: center;
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 0.3s;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  position: relative;
+#valores .visao {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 40px;
 }
 
-.valor:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+#valores .visao h2 {
+  order: 2;
+  margin-left: 20px;
 }
 
-.valor h2 {
-  color: #fff;
-  font-size: 1.6em;
-  margin-top: -10px;
-  margin-bottom: 15px;
-  font-weight: 600;
+
+#valores h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  margin-right: 20px;
 }
 
-.valor p {
-  color: #f0e9d5;
-  font-size: 1.1em;
+#valores p {
   line-height: 1.6;
-}
-
-.emoji {
-  position: relative;
-  top: -40px; /* Ajustado para um espaçamento melhor */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  color: #E7DCC9;
-  font-size: 3em;
-  margin-bottom: -40px;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Melhorias de responsividade */
-@media (max-width: 768px) {
-  .valor {
-    width: 100%; /* Torna os cartões responsivos em telas menores */
-    margin: 10px 0;
-  }
-}
-
-@media (max-width: 1200px) {
-  .mural {
-    flex-direction: column;
-  }
+  font-size: 1.2em;
+  margin-bottom: 20px;
 }
