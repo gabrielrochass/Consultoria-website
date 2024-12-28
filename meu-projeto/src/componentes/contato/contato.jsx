@@ -1,8 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import './contato.css';
 
 const Contato = () => {
+    const [formData, setFormData] = useState({
+        nome: '',
+        email: '',
+        mensagem: ''
+    });
+    const [status, setStatus] = useState('');
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setStatus('Enviando...');
+
+        try {
+            const response = await fetch('/api/contact', { // Rota relativa
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setStatus('Mensagem enviada com sucesso!');
+                setFormData({ nome: '', email: '', mensagem: '' });
+            } else {
+                setStatus('Erro ao enviar a mensagem.');
+            }
+        } catch (error) {
+            console.error(error);
+            setStatus('Erro ao enviar a mensagem. Verifique sua conexão.');
+        }
+    };
+
     return (
         <div className="contato-container">
             <div className="contato-left">
@@ -27,21 +62,46 @@ const Contato = () => {
             </div>
             <div className="contato-right">
                 <h2>Envie sua Mensagem</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="nome">Nome</label>
-                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Seu nome"
+                            value={formData.nome}
+                            onChange={handleChange}
+                            required
+                        />
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Seu email" required />
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Seu email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                        />
                     </div>
                     <div className="form-group">
                         <label htmlFor="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="5"
+                            placeholder="Escreva sua mensagem..."
+                            value={formData.mensagem}
+                            onChange={handleChange}
+                            required
+                        />
                     </div>
                     <button type="submit" className="btn-enviar">Enviar</button>
                 </form>
+                {status && <p>{status}</p>}
             </div>
         </div>
     );

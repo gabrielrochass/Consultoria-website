@@ -1,0 +1,87 @@
+.footer {
+    background-color: #9b8657;;
+    color: white;
+    padding: 40px 40px;
+  }
+  
+.footer-container {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: flex-start;
+  flex-wrap: wrap; 
+  gap: 120px;
+  max-width: 1200px;
+  padding: 0 80px;
+}
+
+/* Estilo das colunas dentro do footer */
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  max-width: 300px;
+  text-align: left;
+  padding: 0 10px;
+}
+
+/* Estilo da logo dentro do footer */
+.footer-logo img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.footer-info {
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding-top: 10px;
+  text-align: left;
+  max-width: 400px;
+  gap: 0;
+}
+
+/* Links dentro do footer */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 20px;
+}
+
+.footer-links a, .social-icons a {
+  color: #efefef;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding-top: 10px;
+  text-align: left;
+}
+
+/* Ícones de redes sociais no footer */
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.social-icons a i {
+  margin-right: 8px;
+  color: red; /* Cor do ícone das redes sociais */
+}
+
+.social-icons a:hover, .footer-links a:hover {
+  color: #E7DCC9;
+  transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #ccc; /* Linha separadora */
+  padding-top: 10px;
+  padding-bottom: 0;
+  font-size: 14px;
+  color: #ccc; 
+}
