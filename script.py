@@ -1,16 +1,20 @@
 import subprocess
 import threading
-import os
+# import os
 
 def run_backend():
-    print("Iniciando o servidor backend...")
-    os.chdir("C:/Users/gabri/Portfólio/Consultoria-website/meu-projeto/backend")  # Muda para o diretório do frontend
-    subprocess.run(["node", "server.js"])
+    try:
+        print("Iniciando o servidor backend...")
+        subprocess.run(["node", "server.js"], check=True, cwd="C:/Users/gabri/Portfólio/Consultoria-website/meu-projeto/backend")
+    except subprocess.CalledProcessError as e:
+        print(f"Erro ao iniciar o backend: {e}")
 
 def run_frontend():
-    print("Iniciando o servidor frontend...")
-    os.chdir("C:/Users/gabri/Portfólio/Consultoria-website/meu-projeto/frontend")  # Muda para o diretório do frontend
-    subprocess.run(["npm", "start"])
+    try:
+        print("Iniciando o servidor frontend...")
+        subprocess.run(["npm", "start"], check=True, cwd="C:/Users/gabri/Portfólio/Consultoria-website/meu-projeto")
+    except subprocess.CalledProcessError as e:
+        print(f"Erro ao iniciar o frontend: {e}")
 
 if __name__ == "__main__":
     # Criação de threads para rodar backend e frontend em paralelo
@@ -24,5 +28,3 @@ if __name__ == "__main__":
     # Aguarda as threads finalizarem
     backend_thread.join()
     frontend_thread.join()
-
-<img src={require('../../assets/logo.png')} alt="Logo" />

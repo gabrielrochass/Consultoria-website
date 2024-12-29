@@ -20,7 +20,7 @@ const Contato = () => {
         setStatus('Enviando...');
 
         try {
-            const response = await fetch('http://localhost:5000/api/contact', { // Ensure the correct URL
+            const response = await fetch('http://localhost:5000/api/contact', { 
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),

@@ -70,3 +70,30 @@
   font-size: 1.2em;
   margin-bottom: 20px;
 }
+
+
+#valores .missao:hover, 
+#valores .valores:hover {
+  background-color: #f8f4e1; 
+  transform: translateX(10px); /* Desloca o conteúdo para a direita */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave */
+  transition: all 0.3s ease;
+}
+
+#valores .visao:hover {
+  background-color: #f8f4e1;
+  transform: translateX(-10px); /* Desloca o conteúdo para a esquerda */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave */
+  transition: all 0.3s ease;
+}
+
+#valores .visao h2:hover {
+  color: #e5b141;
+  transform: scale(1.1); /* Aumenta o tamanho do título */
+  transition: all 0.3s ease;
+}
+
+#valores h2:hover::before {
+  width: 80px; /* Aumenta a largura da linha */
+  background-color: #d14f41; /* Muda a cor da linha ao passar o mouse */
+}
