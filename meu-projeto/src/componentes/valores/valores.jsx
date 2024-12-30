@@ -7,7 +7,7 @@ const Valores = () => {
 
     return (
         <div id="valores" className="valores-container">
-            <h1 className="valores-title">MISSÃO, VISÃO E VALORES</h1>
+            <h1 className="valores-title">Missão, Visão e Valores</h1>
             <p className="valores-description">
                 Fornecemos soluções de alta qualidade para atender às suas necessidades, com inovação e compromisso social.
             </p>
