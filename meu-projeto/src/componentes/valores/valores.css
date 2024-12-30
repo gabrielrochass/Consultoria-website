@@ -1,99 +1,146 @@
-#valores {
-  padding: 60px 15px;
-  max-width: 1200px;
-  margin: 0 auto;
+.valores-container {
+  text-align: left;
+  padding: 3rem;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-#valores h1 {
-  color: #222;
-  margin-bottom: 60px;
-  font-size: 3em;
-  text-align: center;
-  letter-spacing: 2px;
+.valores-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #222; /* Cor de título principal */
   border-bottom: 3px solid #e5b141;
   display: inline-block;
   padding-bottom: 10px;
 }
 
-#valores .missao, #valores .valores {
+.valores-description {
+  color: #444; /* Texto secundário */
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+}
+
+.valores-content {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 40px;
-  border-left: 4px solid #e5b141;
-  padding-left: 20px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 
-#valores .valores {
+.valores-circles {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 0px;
-  border-left: 4px solid #e5b141;
-  padding-left: 20px;
+  flex-direction: column;
+  gap: 2rem;
+  margin-right: 2rem;
 }
 
-#valores .visao {
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  border-right: 4px solid #e5b141; /* Mover a linha para o lado direito */
-  padding-right: 20px; /* Ajustando o padding para dar espaço */
-  text-align: right; /* Alinha o conteúdo à direita */
-}
-
-#valores .visao h2 {
-  order: 2;
-  margin-left: 20px;
-}
-
-#valores h2 {
-  color: #444;
-  margin-bottom: 20px;
-  font-size: 2.5em;
-  margin-right: 10px;
-  text-transform: capitalize;
+  align-items: center;
+  justify-content: center;
+  background: #e5b141; /* Destaque principal */
   position: relative;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  font-size: 2.5rem;
+  color: #fff; /* Texto dentro dos círculos */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#valores h2::before {
+.circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.missoes-circle {
+  background: #c99d35; /* Variação do destaque */
+}
+
+.visao-circle {
+  background: #e5b141;
+}
+
+.valores-circle {
+  background: #c99d35;
+}
+
+.valores-text {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.text-section {
+  margin-bottom: 1rem;
+}
+
+.text-section h2 {
+  font-size: 1.8rem;
+  color: #e5b141; /* Títulos em destaque */
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.text-section p {
+  font-size: 1.1rem;
+  color: #555; /* Texto adicional */
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+@media screen and (max-width: 768px) {
+  .valores-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .valores-circles {
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .valores-text {
+    text-align: center;
+  }
+
+  .text-section p {
+    max-width: 100%;
+  }
+}
+
+.text-section {
+  position: relative;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  padding-left: 10px;
+}
+
+.text-section::after {
   content: '';
   position: absolute;
+  top: 0;
   left: 0;
-  bottom: -5px;
-  width: 50px;
-  height: 3px;
-  background-color: #e5b141;
+  width: 3px;
+  height: 0;
+  background-color: #00796b;
+  transition: height 0.3s ease;
 }
 
-#valores p {
-  line-height: 1.8;
-  font-size: 1.2em;
-  margin-bottom: 20px;
+.text-section:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
-
-#valores .missao:hover, 
-#valores .valores:hover {
-  background-color: #f8f4e1; 
-  transform: translateX(10px); /* Desloca o conteúdo para a direita */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave */
-  transition: all 0.3s ease;
-}
-
-#valores .visao:hover {
-  background-color: #f8f4e1;
-  transform: translateX(-10px); /* Desloca o conteúdo para a esquerda */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave */
-  transition: all 0.3s ease;
-}
-
-#valores .visao h2:hover {
-  color: #e5b141;
-  transform: scale(1.1); /* Aumenta o tamanho do título */
-  transition: all 0.3s ease;
-}
-
-#valores h2:hover::before {
-  width: 80px; /* Aumenta a largura da linha */
-  background-color: #d14f41; /* Muda a cor da linha ao passar o mouse */
+.text-section:hover::after {
+  height: 100%;
 }
