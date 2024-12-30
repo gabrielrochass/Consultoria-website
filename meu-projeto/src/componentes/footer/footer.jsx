@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Logo e Informações */}
         <div className="footer-section">
           <div className="footer-logo">
-            <img src={require('../../assets/logo.png')} alt="Logo" />
+            <img src={require('../../assets/logo-noback.png')} alt="Logo" />
           </div>
           <div className="footer-info">
             <p>A SM Terceirização e Serviços Ltda. é comprometida em oferecer as melhores soluções.</p>

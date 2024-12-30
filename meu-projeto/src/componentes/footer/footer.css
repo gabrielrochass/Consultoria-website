@@ -31,9 +31,9 @@
 
 /* Estilo da logo dentro do footer */
 .footer-logo img {
-  max-width: 100px;
-  height: auto;
-  margin-bottom: 10px;
+  max-width: 150px;
+  margin-bottom: -10px;
+  margin-top: -40px; /* Alterado de 0px para -20px para subir mais a imagem */
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
