@@ -11,7 +11,7 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
     opacity: 0;
     z-index: 0;
 }
@@ -19,20 +19,25 @@
 .slide.active {
     opacity: 1;
     z-index: 1;
+    transform: scale(1.05); 
+    filter: brightness(0.7); 
 }
 
 .slide-content {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: white;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
+    bottom: 50px; 
+    left: 30px;
+    color: rgb(255, 255, 255);
+    padding: 20px 60px; 
     border-radius: 5px;
+    font-size: 1.5rem; 
+    line-height: 1.5;
+    max-width: 750px; 
+    word-wrap: break-word; 
+    filter: brightness(2);
 }
 
-/* botões de passar slide */
-
+/* Botões de navegação */
 button.prev,
 button.next {
     position: absolute;
@@ -40,48 +45,54 @@ button.next {
     transform: translateY(-50%);
     border: none;
     background: none;
-    padding: 40px;
+    padding: 20px;
     cursor: pointer;
     z-index: 10;
-    font-size: 3rem;
-    outline: none;
-    color: white;
+    font-size: 2.5rem; /* Menor, mas ainda visível */
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 button.prev {
-    left: 40px;
+    left: 30px;
 }
 
 button.next {
-    right: 10px;
+    right: 30px;
 }
 
 button.prev:hover,
 button.next:hover {
-    color: #9b9b9b;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* indicadores */
-
+/* Indicadores */
 .indicators {
     position: absolute;
-    bottom: 10px;
+    bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 10px;
+    gap: 12px;
     z-index: 10;
 }
 
 .indicator {
-    width: 10px;
-    height: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 50%;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .indicator.active {
     background-color: white;
+    transform: scale(1.2); /* Efeito de aumento no indicador ativo */
+}
+
+.indicator:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Cor mais intensa no hover */
+    transform: scale(1.3); /* Um aumento sutil no hover */
 }

@@ -5,20 +5,20 @@ const slides = [
     {
         id: 1,
         image: require('../../assets/jardinagem.jpg'),
-        title: 'Slide 1',
-        description: 'Descrição do slide 1',
+        title: 'Nossa Experiência',
+        description: 'Com mais de 15 anos no mercado, nossa empresa possui uma vasta experiência em fornecer soluções personalizadas e de alta qualidade.',
     },
     {
         id: 2,
-        image: require('../../assets/consultoria.png'),
-        title: 'Slide 2',
-        description: 'Descrição do slide 2',
+        image: require('../../assets/limpeza.jpg'),
+        title: 'Equipe Especializada',
+        description: 'Contamos com uma equipe de profissionais altamente qualificados e especializados em diversas áreas para atender às necessidades dos nossos clientes.',
     },
     {
         id: 3,
         image: require('../../assets/adm.jpg'),
-        title: 'Slide 3',
-        description: 'Descrição do slide 3',
+        title: 'Tecnologia de Ponta',
+        description: 'Utilizamos as mais recentes tecnologias e metodologias para garantir que nossos serviços sejam eficientes, inovadores e de alta qualidade.',
     },
 ];
 
