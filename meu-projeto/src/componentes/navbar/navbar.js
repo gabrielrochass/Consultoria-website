@@ -9,11 +9,8 @@ export default function Navbar() {
             <div className="navbar-left">
                 <div className="logo">
                     <Link to="/">
-                        <img src={require('../../assets/logo.png')} alt="Logo" />
+                        <img src={require('../../assets/logo-noback.png')} alt="Logo" />
                     </Link>
-                </div>
-                <div className="menu-nome">
-                    <h1>SM Terceirização e Serviços</h1>
                 </div>
             </div>
 
