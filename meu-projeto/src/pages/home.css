@@ -1,0 +1,6 @@
+.home {
+    background-image: url('../assets/fundo-claro.png');
+    background-size: cover;
+    min-height: 100vh;
+    max-width: 10vw;
+}

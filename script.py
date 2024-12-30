@@ -4,15 +4,17 @@ import threading
 
 def run_backend():
     try:
-        print("Iniciando o servidor backend...")
+        print("Iniciando o servidor backend...\n")
         subprocess.run(["node", "server.js"], check=True, cwd="C:/Users/gabri/Portfólio/Consultoria-website/meu-projeto/backend")
+        print("Servidor backend rodando.")
     except subprocess.CalledProcessError as e:
         print(f"Erro ao iniciar o backend: {e}")
 
 def run_frontend():
     try:
-        print("Iniciando o servidor frontend...")
+        print("Iniciando o servidor frontend...\n")
         subprocess.run(["npm", "start"], check=True, cwd="C:/Users/gabri/Portfólio/Consultoria-website/meu-projeto")
+        print("Servidor frontend rodando.")
     except subprocess.CalledProcessError as e:
         print(f"Erro ao iniciar o frontend: {e}")
 

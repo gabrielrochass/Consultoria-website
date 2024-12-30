@@ -4,14 +4,17 @@ import Contato from '../componentes/contato/contato';
 import Footer from '../componentes/footer/footer';
 import Navbar from '../componentes/navbar/navbar';
 import Servicos from '../componentes/servicos/servicos';
+import Slider from '../componentes/slider/slider';
 import Sobre from '../componentes/sobre/sobre';
 import Valores from '../componentes/valores/valores';
+// import './home.css';
 
 export default function Home() {
     return (
-        <div>
+        <div className="home">
             <Navbar />
-            <Sobre />
+            <Slider />
+            <Sobre /> 
             <Valores />
             <Servicos />
             <Contato />
