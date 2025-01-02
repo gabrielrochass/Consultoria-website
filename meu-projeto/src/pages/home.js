@@ -1,12 +1,10 @@
 // aqui vão os componentes react de src/componentes organizados entre si
 import React from 'react';
-import Contato from '../componentes/contato/contato';
 import Footer from '../componentes/footer/footer';
 import Navbar from '../componentes/navbar/navbar';
-import Servicos from '../componentes/servicos/servicos';
+import ParallaxComponent from '../componentes/parallax/parallax';
 import Slider from '../componentes/slider/slider';
 import Sobre from '../componentes/sobre/sobre';
-import Valores from '../componentes/valores/valores';
 // import './home.css';
 
 export default function Home() {
@@ -14,11 +12,18 @@ export default function Home() {
         <div className="home">
             <Navbar />
             <Slider />
-            <Sobre /> 
-            <Valores />
-            <Servicos />
-            <Contato />
+            <Sobre />
+            <ParallaxComponent  />
+            {/* <Contato /> */}
             <Footer />
         </div>
     );
 }
+
+{/* <Navbar />
+<Slider />
+<Sobre /> 
+<Valores />
+<Servicos />
+<Contato />
+<Footer /> */}

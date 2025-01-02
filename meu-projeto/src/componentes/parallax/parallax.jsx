@@ -1,67 +1,37 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
 import Contato from '../contato/contato';
-import Footer from '../footer/footer';
 import Servicos from '../servicos/servicos';
-import Sobre from '../sobre/sobre';
 import Valores from '../valores/valores';
+
+// Caminho centralizado para imagens
+const fundoClaro = require('../../assets/fundo-claro.png');
+const notebook = require('../../assets/notebook.jpg');
 
 const ParallaxComponent = () => {
   return (
     <div>
-      <Parallax
-        bgImage={require('../../assets/fundo-claro.png')}
-        strength={500}  // intensidade do parallax
+      {/* Seção Valores */}
+      <Parallax bgImage={notebook} strength={500}
+        bgImageStyle={
+          { height: 'auto', width: '100%', filter: 'brightness(0.9)' }
+        }
       >
-        <div style={{ height: '500px' }}>
-            <Sobre />
+        <div style={{ height: '750px' }}>
+          <Valores />
         </div>
       </Parallax>
 
-      <Parallax
-        // bgImage={require('../../assets/fundo-claro.png')}
-        strength={500}  // intensidade do parallax
-      >
-        <div style={{ height: '600px' }}>
-            <Valores />
+      {/* Seção Serviços */}
+      <Parallax bgImage={fundoClaro} strength={500}
+        bgImageStyle={{ height: 'auto', width: '100%' }}>
+        <div style={{ height: '1740px' }}>
+          <Servicos />
+          <Contato />
         </div>
       </Parallax>
-
-      <Parallax
-        bgImage={require('../../assets/fundo-claro.png')}
-        strength={500}  // intensidade do parallax
-      >
-        <div style={{ height: '1200px' }}>
-            <Servicos />
-        </div>
-      </Parallax>
-
-      <Parallax
-        // bgImage={require('../../assets/fundo-claro.png')}
-        strength={500}  // intensidade do parallax
-      >
-        <div style={{ height: '500px' }}>
-            <Contato />
-        </div>
-      </Parallax>
-
-      <Parallax
-        // bgImage={require('../../assets/fundo-claro.png')}
-        strength={500}  // intensidade do parallax
-      >
-        <div style={{ height: '500px' }}>
-            <Footer />
-        </div>
-      </Parallax>
-
-
     </div>
   );
 };
 
 export default ParallaxComponent;
-
-// <Valores />
-// <Servicos />
-// <Contato />
-// <Footer />

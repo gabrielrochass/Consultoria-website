@@ -23,6 +23,10 @@
     filter: brightness(0.7); 
 }
 
+.slide-content .slide-text {
+    filter: brightness(2); 
+}
+
 .slide-content {
     position: absolute;
     bottom: 50px; 

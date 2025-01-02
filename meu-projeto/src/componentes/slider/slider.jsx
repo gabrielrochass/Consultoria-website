@@ -55,8 +55,10 @@ const Slider = () => {
                 >
                     {index === currentSlide && (
                         <div className="slide-content">
-                            <h1>{slide.title}</h1>
-                            <p>{slide.description}</p>
+                            <div className='slide-text'>
+                                <h1>{slide.title}</h1>
+                                <p>{slide.description}</p>
+                            </div>
                         </div>
                     )}
                 </div>
