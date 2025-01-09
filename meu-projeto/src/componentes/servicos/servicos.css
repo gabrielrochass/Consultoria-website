@@ -18,11 +18,9 @@
 }
 
 .container {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 4em;
-    margin-top: -20px;
     display: flex;
     flex-wrap: wrap;
+    gap: 4em;
     margin-top: -20px;
 }
 
@@ -109,6 +107,7 @@
     #servicos h1 {
         font-size: 2.5em;
         text-align: center;
+        margin-left: 0;
     }
 
     .services-section {
@@ -116,7 +115,7 @@
     }
 
     .custom-card {
-        margin-left: 2em;
+        margin-left: 0;
         max-width: 100%;
     }
 
@@ -143,13 +142,15 @@
     }
 
     .container {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 2em;
     }
 
     .custom-card {
         margin-left: 0;
-        max-width: 100%;
+        max-width: 75%;
+        align-self: center;
+        margin-bottom: 1rem;
     }
 
     .custom-content h2 {
