@@ -5,7 +5,7 @@ const slides = [
     {
         id: 1,
         image: require('../../assets/capaa.png'),
-        title: 'Soluções eficientes para o seu negócio',
+        title: 'Soluções Eficientes para o seu Negócio',
         description: 'Oferecemos serviços terceirizados com excelência, agilidade e a confiança que sua empresa merece. Soluções personalizadas em terceirização de mão de obra e consultoria empresarial podem elevar o desempenho do seu negócio.',
     },
     {
@@ -16,13 +16,13 @@ const slides = [
     },
     {
         id: 3,
-        image: require('../../assets/capa4.png'),
-        title: 'Segurança e bem-estar no seu ambiente de trabalho',
+        image: require('../../assets/seguranca2.png'),
+        title: 'Segurança e Bem-estar no seu Ambiente de Trabalho',
         description: 'Nossos serviços são totalmente adaptados às necessidades de cada cliente, garantindo a segurança e o bem-estar de todos os colaboradores no local.',
     },
     {
         id: 4,
-        image: require('../../assets/capa4.png'),
+        image: require('../../assets/resp.png'),
         title: 'Responsabilidade Social',
         description: 'Estamos focados em adotar práticas que promovam o bem-estar das pessoas e a sustentabilidade, valorizando nossos colaboradores e o ambiente.',
     },
