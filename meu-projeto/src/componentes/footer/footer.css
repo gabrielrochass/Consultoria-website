@@ -94,7 +94,7 @@
 .social-icons {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   padding-top: 20px;
 }
 
@@ -108,17 +108,25 @@
   position: relative;
 }
 
-.social-icons a i {
-  margin-right: 8px;
-  color: red;
-}
-
-.social-icons a:hover, .footer-links a:hover {
+.social-icons a:hover {
   color: #E7DCC9;
   transform: scale(1.1);
 }
 
-.social-icons a:hover::after, .footer-links a:hover::after {
+.social-icons a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #E7DCC9;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }

@@ -31,19 +31,13 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Redes Sociais</h4>
           <div className="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-facebook-f"></i> Facebook
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter"></i> Twitter
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-instagram"></i> Instagram
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin-in"></i> LinkedIn
-            </a>
-          </div>
+              <a href="https://www.instagram.com/smterceirizacaoeservicos/" target="_blank" rel="noopener noreferrer">
+                  Instagram
+              </a>
+              <a href="https://linktr.ee/smterceirizacaoeservicos?fbclid=PAZXh0bgNhZW0CMTEAAaab35ZGr9F8TNxebnEHPYXw7v3HUm7nl_GDgv1HqJMQ10TLCLux18064eY_aem_21WbHs4hRglqjYBmAnZXyA" target="_blank" rel="noopener noreferrer">
+                  Linktr.ee
+              </a>
+          </div> 
         </div>
       </div>
 
