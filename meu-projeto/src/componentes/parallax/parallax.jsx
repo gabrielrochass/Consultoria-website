@@ -12,36 +12,36 @@ const ParallaxComponent = () => {
   return (
     <div>
       <Parallax 
-  bgImage={notebook} 
-  strength={500}
-  bgImageStyle={{
-    width: '100%',
-    objectFit: 'cover', // Garante que a imagem cubra toda a seção
-    filter: 'brightness(0.9)',
-  }}
->
-  <div 
-    className="parallax-section valores-section" 
-    style={{
-      minHeight: '100vh', // Altura mínima igual à viewport
-      padding: '40px 20px', // Espaço interno para evitar cortes no texto
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      textAlign: 'center',
-    }}
-  >
-    <Valores />
-  </div>
-</Parallax>
+        bgImage={notebook} 
+        strength={500}
+        bgImageStyle={{
+          width: '100%',
+          objectFit: 'cover',
+          filter: 'brightness(0.9)',
+        }}
+      >
+        <div 
+          className="parallax-section valores-section" 
+          style={{
+            minHeight: '100vh', // Altura mínima igual à viewport
+            padding: '40px 20px', // Espaço interno para evitar cortes no texto
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+          }}
+        >
+          <Valores />
+        </div>
+      </Parallax>
 
 
 
       {/* Seção Serviços */}
       <Parallax bgImage={fundoClaro} strength={500}
         bgImageStyle={{ height: 'auto', width: '100%' }}>
-        <div className="parallax-section servicos-section">
+        <div className="parallax-section servicos-section" data-aos="fade-left">
           <Servicos />
         </div>
       </Parallax>
