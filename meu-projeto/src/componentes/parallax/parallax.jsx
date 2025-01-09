@@ -1,6 +1,5 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
-import Contato from '../contato/contato';
 import Servicos from '../servicos/servicos';
 import Valores from '../valores/valores';
 import './parallax.css';
@@ -30,8 +29,6 @@ const ParallaxComponent = () => {
           <Servicos />
         </div>
       </Parallax>
-      
-      <Contato />
     </div>
   );
 };
