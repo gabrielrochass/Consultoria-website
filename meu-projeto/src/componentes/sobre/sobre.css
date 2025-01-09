@@ -48,16 +48,27 @@
 .image-content {
   flex: 1;
   min-width: 300px;
-  text-align: right;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Alinha a imagem ao centro */
 }
 
+/* Sombra suave e destaque na imagem */
 .image-content img {
-  max-width: 100%;
-  margin-top: -30px;
-  height: auto;
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)); /* Sombra mais suave e uniforme */
+  margin-top: 0;
+  margin-left: 70px;
+  width: 80%;
+  border-radius: 8px; /* Adiciona bordas arredondadas */
 }
+
+.image-content img:hover {
+  transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.2)); /* Sombra mais perceptível */
+}
+
 
 
 /* Responsividade */
@@ -106,29 +117,4 @@
   transform: scale(0.98); /* Efeito de leve redução ao pressionar */
 }
 
-/* Canvas de fundo */
-.background-canvas {
-  position: absolute; /* Garante que o canvas fique fixado atrás */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0; /* Coloca atrás do conteúdo */
-  pointer-events: none; /* Evita interações com o canvas */
-}
-
-/* Certifique-se de que a posição da seção é relativa */
-.sobre-nos {
-  position: relative; /* Necessário para o posicionamento absoluto do canvas */
-  overflow: hidden; /* Impede que o canvas ultrapasse os limites */
-  background-color: #faf8f5; /* Cor de fundo clara */
-  padding: 4rem 2rem;
-  font-family: 'Arial', sans-serif;
-  z-index: 1; /* Certifique-se de que a seção sobrepõe o canvas */
-}
-
-.image-content img {
-  position: relative; /* Mantém a imagem acima do canvas */
-  z-index: 1; /* Garante que a imagem fique acima do canvas */
-}
 
