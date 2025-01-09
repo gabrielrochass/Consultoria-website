@@ -7,7 +7,6 @@
   max-width: 200px;
   border-radius: 50%; 
   margin-right: 10px;
-  size: 100px;
   padding-left: 30px;
 }
 
@@ -29,6 +28,11 @@ nav {
   margin: 0;
   padding: 0;
   margin-left: 580px;
+  transition: max-height 0.3s ease;
+}
+
+.menu.open {
+  max-height: 500px; /* Ajuste conforme necessário */
 }
 
 .menu li {
@@ -61,4 +65,76 @@ nav {
 
 .menu li a:hover::after {
   width: 100%;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 10rem;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.bar.open:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.open:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    padding: 10px 20px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .menu li {
+    font-size: 1rem;
+  }
+
+  .logo img {
+    max-width: 150px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 10px;
+  }
+
+  .menu li a {
+    padding: 8px 15px;
+  }
+
+  .logo img {
+    max-width: 100px;
+  }
 }

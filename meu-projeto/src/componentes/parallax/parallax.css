@@ -1,0 +1,18 @@
+/* parallax.css */
+.parallax-section {
+    height: auto;
+    min-height: 50vh; /* Altura mínima para garantir que a seção seja visível */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    .parallax-section {
+        padding: 10px;
+        background-attachment: scroll;
+    }
+}

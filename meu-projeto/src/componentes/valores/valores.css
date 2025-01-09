@@ -11,14 +11,14 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #343434; /* Cor de título principal */
-  border-bottom: 3px solid #e5b141;;
+  color: #343434;
+  border-bottom: 3px solid #e5b141;
   display: inline-block;
   padding-bottom: 10px;
 }
 
 .valores-description {
-  color: #e5dfd3; 
+  color: #e5dfd3;
   font-size: 1.2rem;
   margin-bottom: 3rem;
   max-width: 800px;
@@ -37,7 +37,6 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  /* margin-right: 410px; */
   margin-right: 3rem;
   margin-left: 2rem;
 }
@@ -49,11 +48,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #e5b141; /* Destaque principal */
+  background: #e5b141;
   position: relative;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   font-size: 2.5rem;
-  color: #fff; /* Texto dentro dos círculos */
+  color: #fff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -63,17 +62,17 @@
 }
 
 .missoes-circle {
-  background: #8b6e3b; /* Cor base mais escura */
+  background: #8b6e3b;
   margin-bottom: 4rem;
 }
 
 .visao-circle {
-  background: #c4a76e; /* Cor combinada 1 mais clara */
+  background: #c4a76e;
   margin-bottom: 3rem;
 }
 
 .valores-circle {
-  background: #b07f4a; /* Cor combinada 2 mais escura */
+  background: #b07f4a;
   margin-bottom: 0;
 }
 
@@ -91,25 +90,36 @@
 }
 
 .text-section h2 {
-  font-size: 2rem; /* Tamanho maior para mais impacto */
-  color: #343434; /* Cor de título principal */
+  font-size: 2rem;
+  color: #343434;
   margin-bottom: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 2px; /* Aumento do espaçamento entre as letras para criar um estilo mais refinado */
-  font-family: 'Playfair Display', serif; /* Fonte serifada para elegância */
-  transition: color 0.3s ease, text-shadow 0.3s ease; /* Transição suave */
+  letter-spacing: 2px;
+  font-family: 'Playfair Display', serif;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-
 
 .text-section p {
   font-size: 1.1rem;
-  color: #e5dfd3; 
+  color: #e5dfd3;
   line-height: 1.6;
   max-width: 600px;
 }
 
-
 @media screen and (max-width: 768px) {
+  .valores-container {
+    padding: 2rem;
+  }
+
+  .valores-title {
+    font-size: 2rem;
+  }
+
+  .valores-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
   .valores-content {
     flex-direction: column;
     align-items: center;
@@ -120,6 +130,12 @@
     justify-content: center;
     margin-right: 0;
     margin-bottom: 5rem;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
   }
 
   .valores-text {
@@ -168,4 +184,3 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   transition: color 0.5s ease, text-shadow 0.5s ease;
 }
-

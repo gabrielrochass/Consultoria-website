@@ -3,6 +3,7 @@ import { Parallax } from 'react-parallax';
 import Contato from '../contato/contato';
 import Servicos from '../servicos/servicos';
 import Valores from '../valores/valores';
+import './parallax.css';
 
 // Caminho centralizado para imagens
 const fundoClaro = require('../../assets/fundo-claro.png');
