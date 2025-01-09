@@ -63,7 +63,6 @@
     color: #444;
     margin-bottom: 15px;
     font-size: 1.8em; /* Diminuído de 2em para 1.8em */
-    text-transform: capitalize;
     position: relative;
 }
 
@@ -91,7 +90,6 @@
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    text-transform: uppercase;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
