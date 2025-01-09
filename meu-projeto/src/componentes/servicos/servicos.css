@@ -1,17 +1,17 @@
 #servicos h1 {
     color: #222;
-    margin-bottom: 60px;
+    margin-bottom: 3em;
     font-size: 3em;
     text-align: center;
     letter-spacing: 2px;
     border-bottom: 3px solid #e5b141;
     display: inline-block;
-    padding-bottom: 10px;
-    margin-top: -50px;
+    padding-bottom: 0.5em;
+    margin-top: -2em;
 }
 
 .services-section {
-    padding: 60px 15px;
+    padding: 3em 1em;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -19,7 +19,7 @@
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    gap: 2em;
     justify-content: center;
 }
 
@@ -27,25 +27,25 @@
     position: relative;
     background: #f9f9f9;
     border-left: 4px solid #e5b141;
-    padding: 20px;
+    padding: 1.5em;
     width: 100%;
-    max-width: 300px; /* Diminuído de 350px para 300px */
+    max-width: 300px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .custom-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-0.3em);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .img-box {
     width: 100%;
-    height: 180px; /* Ajustado para proporção menor */
+    height: 180px;
     border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 1.5em;
 }
 
 .img-box img {
@@ -61,8 +61,8 @@
 
 .custom-content h2 {
     color: #444;
-    margin-bottom: 15px;
-    font-size: 1.8em; /* Diminuído de 2em para 1.8em */
+    margin-bottom: 1em;
+    font-size: 1.8em;
     position: relative;
 }
 
@@ -70,7 +70,7 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -5px;
+    bottom: -0.3em;
     width: 50px;
     height: 3px;
     background-color: #e5b141;
@@ -84,8 +84,8 @@
 
 .custom-content a {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
+    margin-top: 1em;
+    padding: 0.5em 1em;
     background-color: #e5b141;
     color: #fff;
     text-decoration: none;
@@ -96,4 +96,54 @@
 
 .custom-content a:hover {
     background-color: #c99d35;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #servicos h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .custom-card {
+        margin-left: 2em;
+    }
+
+    .custom-content h2 {
+        font-size: 1.5em;
+    }
+
+    .img-box {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    #servicos h1 {
+        font-size: 2em;
+        margin-top: 50px;
+    }
+
+    .services-section {
+        padding: 1.5em 0.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-content h2 {
+        font-size: 1.2em;
+    }
+
+    .img-box {
+        height: 120px;
+    }
+
+    .custom-content p {
+        font-size: 0.9em;
+    }
+
+    .custom-content a {
+        padding: 0.5em 0.75em;
+    }
 }
