@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaAddressBook, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import './contato.css';
 
 const Contato = () => {
@@ -39,22 +39,27 @@ const Contato = () => {
     };
 
     return (
-        <div id="contato" className="contato-container">
+        <div className="contato-container">
             <div className="contato-left">
                 <h1>Entre em Contato</h1>
                 <p>
                     Estamos aqui para ajudar! Conecte-se conosco através das redes sociais ou preencha o formulário ao lado para nos enviar uma mensagem.
                 </p>
                 <div className="social-links">
-                    <a href="https://www.instagram.com/smterceirizacaoeservicos/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                        <FaFacebook /> Facebook
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                        <FaTwitter /> Twitter
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                         <FaInstagram /> Instagram
                     </a>
-                    <a href="https://linktr.ee/smterceirizacaoeservicos?fbclid=PAZXh0bgNhZW0CMTEAAaab35ZGr9F8TNxebnEHPYXw7v3HUm7nl_GDgv1HqJMQ10TLCLux18064eY_aem_21WbHs4hRglqjYBmAnZXyA" target="_blank" rel="noopener noreferrer">
-                        <FaAddressBook /> Linktr.ee
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <FaLinkedin /> LinkedIn
                     </a>
-                </div>                
+                </div>
             </div>
-
             <div className="contato-right">
                 <h2>Envie sua Mensagem</h2>
                 <form onSubmit={handleSubmit}>
