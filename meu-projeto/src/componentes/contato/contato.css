@@ -1,10 +1,16 @@
+/* Garantir que todos os elementos têm box-sizing apropriado */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 .contato-container {
-    padding: 60px 60px;
+    padding: 60px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
     min-height: 80vh;
+    width: 100%;
 }
 
 .contato-left {
@@ -17,7 +23,7 @@
 }
 
 .contato-left h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;  /* Usar unidades relativas */
     color: #222;
     margin-bottom: 20px;
     border-left: 5px solid #e5b141;
@@ -25,7 +31,7 @@
 }
 
 .contato-left p {
-    font-size: 1.2em;
+    font-size: 1.2rem;  /* Usar unidades relativas */
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6;
@@ -40,7 +46,7 @@
 
 .social-links a {
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.1rem;  /* Usar unidades relativas */
     color: #e5b141;
     transition: color 0.3s ease;
     display: flex;
@@ -62,7 +68,7 @@
 }
 
 .contato-right h2 {
-    font-size: 2em;
+    font-size: 2rem;  /* Usar unidades relativas */
     color: #222;
     margin-bottom: 20px;
 }
@@ -73,7 +79,7 @@
 }
 
 label {
-    font-size: 1em;
+    font-size: 1rem;  /* Usar unidades relativas */
     color: #333;
     display: block;
     margin-bottom: 5px;
@@ -85,7 +91,7 @@ textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1rem;  /* Usar unidades relativas */
     outline: none;
 }
 
@@ -102,7 +108,7 @@ textarea {
 .btn-enviar {
     background-color: #e5b141;
     color: white;
-    font-size: 1em;
+    font-size: 1rem;  /* Usar unidades relativas */
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -113,4 +119,22 @@ textarea {
 
 .btn-enviar:hover {
     background-color: #d4a038;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .contato-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contato-left,
+    .contato-right {
+        flex: none;
+        width: 100%;
+    }
+
+    .social-links a {
+        font-size: 1rem;
+    }
 }

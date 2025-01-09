@@ -25,7 +25,7 @@ const ParallaxComponent = () => {
       {/* Seção Serviços */}
       <Parallax bgImage={fundoClaro} strength={500}
         bgImageStyle={{ height: 'auto', width: '100%' }}>
-        <div style={{ height: '1740px' }}>
+        <div style={{ height: '1900px' }}>
           <Servicos />
           <Contato />
         </div>
