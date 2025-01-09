@@ -49,6 +49,7 @@
   gap: 0;
   color: #efefef;
   position: relative;
+  margin-top: -10px;
 }
 
 .footer-links {

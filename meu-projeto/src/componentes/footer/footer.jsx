@@ -2,32 +2,32 @@ import React from 'react';
 import './footer.css';
 
 const Footer = () => {
+  const scrollToSection = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Logo e Informações */}
         <div className="footer-section">
           <div className="footer-logo">
             <img src={require('../../assets/logo-noback.png')} alt="Logo" />
           </div>
           <div className="footer-info">
-            <p>A SM Terceirização e Serviços Ltda. é comprometida em oferecer as melhores soluções.</p>
+            <p>SM Terceirização e Serviços: Eficiência e qualidade para impulsionar o seu negócio.</p>
             <p><br />Entre em contato conosco para saber mais.</p>
           </div>
         </div>
 
-        {/* Links Úteis */}
         <div className="footer-section">
           <h4>Links Úteis</h4>
           <div className="footer-links">
-            <a href="#sobre">Sobre</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#contato">Contato</a>
-            <a href="#termos">Termos e Condições</a>
+            <a href="#sobre" onClick={() => scrollToSection('sobre')}>Sobre</a>
+            <a href="#servicos" onClick={() => scrollToSection('servicos')}>Serviços</a>
+            <a href="#contato" onClick={() => scrollToSection('contato')}>Contato</a>
           </div>
         </div>
 
-        {/* Redes Sociais */}
         <div className="footer-section">
           <h4>Redes Sociais</h4>
           <div className="social-icons">
