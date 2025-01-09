@@ -1,91 +1,134 @@
+/* Estilo geral */
 .sobre-nos {
-  padding: 60px 15px;
-  /* background-image: url('../../assets/fundo-claro.png');
-  background-size: cover; */
+  background-color: #faf8f5; /* Cor de fundo clara e agradável */
+  padding: 4rem 2rem;
+  font-family: 'Arial', sans-serif;
+  text-align: justify;
 }
 
-.sobre-nos h1 {
-  color: #222;
-  margin-bottom: 60px;
-  font-size: 3em;
-  text-align: center;
-  letter-spacing: 2px;
+.sobre-nos .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Adaptável para dispositivos menores */
+  align-items: center;
+  gap: 2rem;
+}
+
+.sobre-nos .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Texto */
+.text-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.text-content h2 {
+  font-size: 2.5rem;
+  color: #222; /* Cor de título principal */
+  margin-bottom: 1.5rem;
   border-bottom: 3px solid #e5b141;
   display: inline-block;
   padding-bottom: 10px;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap; /* Responsivo para telas menores */
-}
-
-.text-content {
-  flex: 1;
-  margin-right: 5px;
-}
-
-.text-content h2 {
-  font-size: 2.5em;
-  color: #333;
-  margin-bottom: 20px;
-  text-transform: capitalize;
-  position: relative;
-}
-
-.text-content h2::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 50px;
-  height: 3px;
-  background-color: #e5b141;
-}
-
 .text-content p {
-  font-size: 1.2em;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  margin-right: 0;
-  text-align: justify;
+  font-size: 1.2rem;
+  color: #2a2a2a;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
 
+/* Imagem */
 .image-content {
   flex: 1;
+  min-width: 300px;
   text-align: right;
 }
 
 .image-content img {
   max-width: 100%;
+  margin-top: -30px;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 /* Responsividade */
-@media (max-width: 800px) {
-  .content {
-    flex-direction: column; /* Muda para layout vertical em telas menores */
-  }
-
-  .text-content {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-
-  .image-content {
+@media (max-width: 768px) {
+  .sobre-nos .content {
+    flex-direction: column;
     text-align: center;
   }
+
+  .text-content h2 {
+    font-size: 2rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+}
+
+
+/* Botão de navegação com mais destaque */
+.contact-button {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 1rem 2rem; /* Aumentar o tamanho do botão */
+  font-size: 1.2rem; /* Fonte maior */
+  color: #333; /* Texto escuro */
+  background-color: #fff; /* Fundo claro */
+  border: 2px solid #ccc; /* Borda ligeiramente mais espessa */
+  border-radius: 6px; /* Bordas mais arredondadas */
+  cursor: pointer;
+  letter-spacing: 0.09em; /* Espacamento sutil entre letras */
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #9b8657;
+  color: #e5dfd3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra mais perceptível */
+  transform: translateY(-3px); /* Movimento sutil para cima */
+  transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease, color 0.5s ease; /* Transição mais suave */
+}
+
+.contact-button:active {
+  background-color: #e8e8e8; /* Fundo mais escuro no clique */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra reduzida no clique */
+  transform: scale(0.98); /* Efeito de leve redução ao pressionar */
+}
+
+/* Canvas de fundo */
+.background-canvas {
+  position: absolute; /* Garante que o canvas fique fixado atrás */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Coloca atrás do conteúdo */
+  pointer-events: none; /* Evita interações com o canvas */
+}
+
+/* Certifique-se de que a posição da seção é relativa */
+.sobre-nos {
+  position: relative; /* Necessário para o posicionamento absoluto do canvas */
+  overflow: hidden; /* Impede que o canvas ultrapasse os limites */
+  background-color: #faf8f5; /* Cor de fundo clara */
+  padding: 4rem 2rem;
+  font-family: 'Arial', sans-serif;
+  z-index: 1; /* Certifique-se de que a seção sobrepõe o canvas */
 }
 
 .image-content img {
-  width: 70%;
+  position: relative; /* Mantém a imagem acima do canvas */
+  z-index: 1; /* Garante que a imagem fique acima do canvas */
 }
+

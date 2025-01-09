@@ -15,14 +15,17 @@ const sobre = () => {
             <p>
               Entendemos que cada cliente tem necessidades únicas. Nossa experiência e flexibilidade nos permitem adaptar nossos serviços, proporcionando um atendimento personalizado. Trabalhamos com uma equipe qualificada e comprometida, pronta para oferecer as melhores soluções em terceirização, seja no setor industrial, comercial, hospitalar ou na gestão de serviços para condomínios.
             </p>
-            <p>
-              <em>Visite-nos e descubra como podemos transformar seu ambiente!</em>
-            </p>
+            <button 
+              className="contact-button" 
+              onClick={() => document.getElementById('contato').scrollIntoView({ behavior: 'smooth' })}
+            >
+              Descubra Mais
+            </button>
           </div>
 
           {/* Imagem ao lado direito */}
           <div className="image-content">
-            <img src={require('../../assets/sobre2.png')} alt="Sobre Nós" />
+            <img src={require('../../assets/sobre3.png')} alt="Sobre Nós" />
           </div>
         </div>
       </div>
