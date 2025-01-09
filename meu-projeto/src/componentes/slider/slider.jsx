@@ -18,7 +18,7 @@ const slides = [
         id: 3,
         image: require('../../assets/seguranca2.png'),
         title: 'Segurança e Bem-estar no seu Ambiente de Trabalho',
-        description: 'Nossos serviços são totalmente adaptados às necessidades de cada cliente, garantindo a segurança e o bem-estar de todos os colaboradores no local.',
+        description: 'Com a SM Terceirização e Serviços, você tem a confiança de que sua equipe está sendo cuidada em todos os aspectos, com soluções personalizadas para garantir a segurança, o bem-estar e a proteção do colaborador no ambiente de trabalho.',
     },
     {
         id: 4,

@@ -44,7 +44,7 @@ const Servicos = () => {
                 </div>
                 <div className="custom-card">
                     <div className="img-box">
-                        <img src={require('../../assets/jardinagem.jpg')} alt="Jardinagem e Paisagismo" />
+                        <img src={require('../../assets/hosp.png')} alt="Limpeza Hospitalar" />
                     </div>
                     <div className="custom-content">
                         <h2>Limpeza Hospitalar</h2>
@@ -53,7 +53,7 @@ const Servicos = () => {
                 </div>
                 <div className="custom-card">
                     <div className="img-box">
-                        <img src={require('../../assets/esp.png')} alt="Serviços Administrativos" />
+                        <img src={require('../../assets/esp2.png')} alt="Serviços Especializados" />
                     </div>
                     <div className="custom-content">
                         <h2>Serviços Especializados</h2>

@@ -26,6 +26,11 @@
     }
     
     .servicos-section {
+        background-attachment: scroll; /* Desativa o parallax */
+        background-image: url('../../assets/fundo-claro.png'); /* Substitua pelo caminho da sua imagem */
+    }
+    
+    .servicos-section {
         color: black;
     }
 }

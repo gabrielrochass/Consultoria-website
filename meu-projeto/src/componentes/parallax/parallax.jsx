@@ -30,6 +30,7 @@ const ParallaxComponent = () => {
           <Servicos />
         </div>
       </Parallax>
+      
       <Contato />
     </div>
   );
