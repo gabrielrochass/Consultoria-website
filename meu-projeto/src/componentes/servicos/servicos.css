@@ -1,13 +1,14 @@
 #servicos h1 {
     color: #222;
-    margin-bottom: 3em;
+    margin-bottom: 2.3em;
     font-size: 3em;
-    text-align: center;
     letter-spacing: 2px;
     border-bottom: 3px solid #e5b141;
     display: inline-block;
     padding-bottom: 0.5em;
     margin-top: 0.8em;
+    text-align: left;
+    margin-left: -48rem;
 }
 
 .services-section {
@@ -17,10 +18,11 @@
 }
 
 .container {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 4em;
-    justify-content: center;
+    margin-top: -20px;
+    display: flex;
+    flex-wrap: wrap;
     margin-top: -20px;
 }
 
@@ -30,7 +32,7 @@
     border-left: 4px solid #e5b141;
     padding: 1.5em;
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -66,6 +68,7 @@
     margin-bottom: 1em;
     font-size: 1.8em;
     position: relative;
+    text-align: left;
 }
 
 .custom-content h2::before {
@@ -82,6 +85,7 @@
     line-height: 1.8;
     font-size: 1em;
     color: #555;
+    text-align: justify;
 }
 
 .custom-content a {
@@ -107,8 +111,13 @@
         text-align: center;
     }
 
+    .services-section {
+        padding: 2em 1em;
+    }
+
     .custom-card {
         margin-left: 2em;
+        max-width: 100%;
     }
 
     .custom-content h2 {
@@ -131,6 +140,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+
+    .custom-card {
+        margin-left: 0;
+        max-width: 100%;
     }
 
     .custom-content h2 {

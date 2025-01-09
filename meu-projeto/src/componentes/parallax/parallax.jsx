@@ -28,9 +28,9 @@ const ParallaxComponent = () => {
         bgImageStyle={{ height: 'auto', width: '100%' }}>
         <div className="parallax-section servicos-section">
           <Servicos />
-          <Contato />
         </div>
       </Parallax>
+      <Contato />
     </div>
   );
 };
