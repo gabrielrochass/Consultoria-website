@@ -35,7 +35,7 @@ const Servicos = () => {
                 </div>
                 <div className="custom-card">
                     <div className="img-box">
-                    <img src={require('../../assets/recp.png')} alt="Manutenção Predial" />
+                    <img src={require('../../assets/esp.png')} alt="Manutenção Predial" />
                     </div>
                     <div className="custom-content">
                         <h2>Recepção</h2>

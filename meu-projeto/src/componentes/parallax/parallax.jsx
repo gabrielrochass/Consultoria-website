@@ -18,7 +18,7 @@ const ParallaxComponent = () => {
           { height: 'auto', width: '100%', filter: 'brightness(0.9)' }
         }
       >
-        <div style={{ height: '900px' }}>
+        <div className="parallax-section valores-section">
           <Valores />
         </div>
       </Parallax>
@@ -26,7 +26,7 @@ const ParallaxComponent = () => {
       {/* Seção Serviços */}
       <Parallax bgImage={fundoClaro} strength={500}
         bgImageStyle={{ height: 'auto', width: '100%' }}>
-        <div style={{ height: '1900px' }}>
+        <div className="parallax-section servicos-section">
           <Servicos />
           <Contato />
         </div>

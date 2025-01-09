@@ -1,18 +1,48 @@
-/* parallax.css */
 .parallax-section {
-    height: auto;
-    min-height: 50vh; /* Altura mínima para garantir que a seção seja visível */
+    position: relative;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     padding: 20px;
-    background-size: cover;
+    box-sizing: border-box;
+    height: auto;
     background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
 @media (max-width: 768px) {
     .parallax-section {
         padding: 10px;
-        background-attachment: scroll;
+        background-attachment: scroll; /* Desativa o parallax */
+        background-image: url('../../assets/visao.png'); /* Substitua pelo caminho da sua imagem */
+    }
+    
+    .valores-section,
+    .servicos-section {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .servicos-section {
+        color: black;
+    }
+}
+
+@media (max-width: 480px) {
+    .parallax-section {
+        padding: 5px;
+        background-attachment: scroll; /* Desativa o parallax */
+        background-image: url('../../assets/visao.png'); /* Substitua pelo caminho da sua imagem */
+    }
+
+    .valores-section,
+    .servicos-section {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .servicos-section {
+        color: black;
     }
 }
