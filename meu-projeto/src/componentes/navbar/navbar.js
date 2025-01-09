@@ -15,9 +15,9 @@ export default function Navbar() {
 
             <ul className="menu">
                 <li><Link to="home" smooth={true} duration={500}>Home</Link></li>
-                <li><Link to="sobre" smooth={true} duration={500}>Sobre</Link></li>
-                <li><Link to="servicos" smooth={true} duration={500}>Serviços</Link></li>
-                <li><Link to="contato" smooth={true} duration={500}>Contato</Link></li>
+                <li><Link to="sobre" smooth={true} duration={650}>Sobre</Link></li>
+                <li><Link to="servicos" smooth={true} duration={1200}>Serviços</Link></li>
+                <li><Link to="contato" smooth={true} duration={2000}>Contato</Link></li>
             </ul>
         </nav>
     );

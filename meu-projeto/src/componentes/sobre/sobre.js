@@ -10,14 +10,13 @@ const sobre = () => {
           <div className="text-content">
             <h2>Sobre Nós</h2>
             <p>
-              A [Nome da Empresa] é uma empresa de terceirização especializada em oferecer soluções eficientes e de qualidade
-              em diversos setores. Com uma história de sucesso desde [ano de fundação], nos destacamos pelo compromisso com 
-              a inovação, ética e responsabilidade social. Nosso time é formado por especialistas dedicados que garantem
-              a excelência em cada projeto.
+              A SM Terceirização e Serviços Ltda. é uma empresa inovadora no mercado, especializada na prestação de serviços de terceirização nos diversos seguimentos. Com um compromisso sólido com a qualidade e eficiência, buscamos soluções práticas e acessíveis para atender às necessidades de nossos clientes, garantindo um ambiente mais organizado, produtivo e seguro.
             </p>
             <p>
-              Nosso objetivo é ser a principal escolha no mercado de terceirização, oferecendo serviços personalizados para
-              atender às necessidades específicas de cada cliente. Valorizamos a transparência, o respeito e a satisfação do cliente.
+              Entendemos que cada cliente tem necessidades únicas. Nossa experiência e flexibilidade nos permitem adaptar nossos serviços, proporcionando um atendimento personalizado. Trabalhamos com uma equipe qualificada e comprometida, pronta para oferecer as melhores soluções em terceirização, seja no setor industrial, comercial, hospitalar ou na gestão de serviços para condomínios.
+            </p>
+            <p>
+              <em>Visite-nos e descubra como podemos transformar seu ambiente!</em>
             </p>
           </div>
 

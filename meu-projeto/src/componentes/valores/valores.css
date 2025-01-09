@@ -1,5 +1,5 @@
 .valores-container {
-  text-align: left;
+  text-align: justify;
   padding: 4.7rem;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@
 }
 
 .valores-description {
-  color: #444; /* Texto secundário */
+  color: #e5dfd3; 
   font-size: 1.2rem;
   margin-bottom: 3rem;
   max-width: 800px;
@@ -30,6 +30,7 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 2rem;
+  text-align: justify;
 }
 
 .valores-circles {
@@ -63,12 +64,12 @@
 
 .missoes-circle {
   background: #8b6e3b; /* Cor base mais escura */
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
 }
 
 .visao-circle {
   background: #c4a76e; /* Cor combinada 1 mais clara */
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .valores-circle {
@@ -78,7 +79,7 @@
 
 .valores-text {
   flex: 1;
-  text-align: left;
+  text-align: justify;
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
@@ -90,18 +91,23 @@
 }
 
 .text-section h2 {
-  font-size: 1.8rem;
-  color: #9b8657;
-  margin-bottom: 0.5rem;
+  font-size: 2rem; /* Tamanho maior para mais impacto */
+  color: #cea624; /* Dourado mais sofisticado para um visual luxuoso */
+  margin-bottom: 0.75rem;
   text-transform: uppercase;
+  letter-spacing: 2px; /* Aumento do espaçamento entre as letras para criar um estilo mais refinado */
+  font-family: 'Playfair Display', serif; /* Fonte serifada para elegância */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Transição suave */
 }
+
 
 .text-section p {
   font-size: 1.1rem;
-  color: #555; /* Texto adicional */
+  color: #e5dfd3; 
   line-height: 1.6;
   max-width: 600px;
 }
+
 
 @media screen and (max-width: 768px) {
   .valores-content {
@@ -127,7 +133,7 @@
 
 .text-section {
   position: relative;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
   padding-left: 10px;
 }
 
@@ -143,11 +149,27 @@
 }
 
 .text-section:hover {
-  background-color: #f0f0f0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  background-color: #ece1cd; /* Cor mais clara para contraste com o texto */
+  border-radius: 8px; /* Deixa a borda ainda mais suave */
+  padding: 10px 20px; /* Aumenta o preenchimento para um visual mais moderno */
+  transition: background-color 0.5s ease, padding 0.5s ease, box-shadow 0.5s ease; /* Transição mais suave */
 }
 
 .text-section:hover::after {
-  height: 100%;
+  height: 100%; /* Expande a linha dourada ao passar o mouse */
 }
+
+.text-section p, .text-section h2 {
+  transition: color 1s ease;
+}
+
+.text-section:hover p, .text-section:hover h2 {
+  color: #1a1a1a; /* Cor mais escura para um contraste moderno */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra ao texto */
+}
+
+.text-section:hover::after {
+  background-color: #e5b141;
+
+}
+

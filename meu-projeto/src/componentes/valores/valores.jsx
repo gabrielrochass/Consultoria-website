@@ -27,19 +27,19 @@ const Valores = () => {
                     <div className="text-section missoes-text">
                         <h2>MISSÃO</h2>
                         <p>
-                            Fornecer soluções de terceirização e serviços de alta qualidade, atendendo às necessidades específicas de nossos clientes e contribuindo para o seu sucesso.
+                            Oferecer soluções de terceirização de alta qualidade, com foco na excelência dos serviços prestados, buscando sempre a satisfação plena de nossos clientes e contribuindo para a melhoria contínua de seus ambientes de trabalho.
                         </p>
                     </div>
                     <div className="text-section visao-text">
                         <h2>VISÃO</h2>
                         <p>
-                            Ser reconhecida como a principal empresa de terceirização de serviços no Brasil, destacando-se pela inovação, qualidade e compromisso com a satisfação dos clientes.
+                            Ser reconhecida como referência em soluções de terceirização, destacando-se pela qualidade, confiança e inovação nos serviços prestados, tornando-se a primeira escolha de empresas e condomínios que buscam excelência e eficiência.
                         </p>
                     </div>
                     <div className="text-section valores-text">
                         <h2>VALORES</h2>
                         <p>
-                            Valorizamos a excelência nos serviços, a resiliência frente aos desafios e o compromisso com a responsabilidade social e ambiental.
+                            Qualidade, transparência, responsabilidade e sustentabilidade. Comprometemo-nos a entregar serviços de excelência, mantendo uma comunicação clara com nossos clientes, assumindo desafios com seriedade e agindo sempre com respeito ao meio ambiente.
                         </p>
                     </div>
                 </div>

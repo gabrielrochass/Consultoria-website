@@ -5,20 +5,32 @@ const slides = [
     {
         id: 1,
         image: require('../../assets/capaa.png'),
-        title: 'Nossa Experiência',
-        description: 'Com mais de 15 anos no mercado, nossa empresa possui uma vasta experiência em fornecer soluções personalizadas e de alta qualidade.',
+        title: 'Soluções eficientes para o seu negócio',
+        description: 'Oferecemos serviços terceirizados com excelência, agilidade e a confiança que sua empresa merece. Soluções personalizadas em terceirização de mão de obra e consultoria empresarial podem elevar o desempenho do seu negócio.',
     },
     {
         id: 2,
         image: require('../../assets/capa2.png'),
         title: 'Equipe Especializada',
-        description: 'Contamos com uma equipe de profissionais altamente qualificados e especializados em diversas áreas para atender às necessidades dos nossos clientes.',
+        description: 'Contamos com profissionais capacitados e comprometidos em oferecer soluções de alta qualidade. Com treinamento constante e foco em eficiência, nossa equipe está preparada para atender às suas necessidades.',
     },
     {
         id: 3,
         image: require('../../assets/capa4.png'),
-        title: 'Tecnologia de Ponta',
-        description: 'Utilizamos as mais recentes tecnologias e metodologias para garantir que nossos serviços sejam eficientes, inovadores e de alta qualidade.',
+        title: 'Segurança e bem-estar no seu ambiente de trabalho',
+        description: 'Nossos serviços são totalmente adaptados às necessidades de cada cliente, garantindo a segurança e o bem-estar de todos os colaboradores no local.',
+    },
+    {
+        id: 4,
+        image: require('../../assets/capa4.png'),
+        title: 'Responsabilidade Social',
+        description: 'Estamos focados em adotar práticas que promovam o bem-estar das pessoas e a sustentabilidade, valorizando nossos colaboradores e o ambiente.',
+    },
+    {
+        id: 5,
+        image: require('../../assets/capa4.png'),
+        title: 'Consultoria em Gestão de Contratos',
+        description: 'Nossos consultores garantem a gestão eficiente, cumprimento de prazos e conformidade legal em cada etapa do processo, desde a elaboração até a renovação.',
     },
 ];
 

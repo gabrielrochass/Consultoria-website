@@ -11,16 +11,17 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: scale(1.05);
     opacity: 0;
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
     z-index: 0;
 }
 
 .slide.active {
+    transform: scale(1);
     opacity: 1;
     z-index: 1;
-    transform: scale(1.05); 
-    filter: brightness(0.7); 
+    filter: brightness(0.7);
 }
 
 .slide-content .slide-text {

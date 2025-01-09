@@ -17,7 +17,7 @@ const ParallaxComponent = () => {
           { height: 'auto', width: '100%', filter: 'brightness(0.9)' }
         }
       >
-        <div style={{ height: '750px' }}>
+        <div style={{ height: '900px' }}>
           <Valores />
         </div>
       </Parallax>
