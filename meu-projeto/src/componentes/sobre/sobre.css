@@ -69,10 +69,12 @@
   filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.2)); /* Sombra mais perceptível */
 }
 
-
-
 /* Responsividade */
 @media (max-width: 768px) {
+  .sobre-nos {
+    padding: 2rem 1rem;
+  }
+
   .sobre-nos .content {
     flex-direction: column;
     text-align: center;
@@ -85,7 +87,32 @@
   .text-content p {
     font-size: 1rem;
   }
+
+  .image-content img {
+    margin-left: 0;
+    width: 100%;
+  }
 }
+
+@media (max-width: 480px) {
+  .text-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .text-content p {
+    font-size: 0.9rem;
+  }
+
+  .contact-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    margin-bottom: 50px;
+  }
+
+    .image-content img {
+      margin-bottom: 50px;
+    }
+  }
 
 
 /* Botão de navegação com mais destaque */
@@ -116,5 +143,3 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra reduzida no clique */
   transform: scale(0.98); /* Efeito de leve redução ao pressionar */
 }
-
-
