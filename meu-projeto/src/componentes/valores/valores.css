@@ -204,6 +204,7 @@
   .valores-description {
     font-size: 0.9rem;
     margin-left: 0; /* Ajuste da margem à esquerda */
+    margin-bottom: 20px;
   }
 
   .valores-circles {
@@ -234,27 +235,27 @@
   width: 3px;
   height: 0;
   background-color: #e5b141;
-  transition: height 0.3s ease;
+  transition: height 0.3s ease-in-out;
 }
 
 .text-section:hover {
   background-color: #ece1cd;
   border-radius: 8px;
   padding: 10px;
-  transition: background-color 0.5s ease, border-radius 0.5s ease, padding 0.5s ease;
+  transition: background-color 0.5s ease-in-out, border-radius 0.5s ease-in-out, padding 0.5s ease-in-out;
 }
 
 .text-section:hover::after {
   height: 100%;
-  transition: height 0.5s ease;
+  transition: height 1s ease-in-out;
 }
 
 .text-section p, .text-section h2 {
-  transition: color 0.5s ease;
+  transition: color 0.5s ease-in-out;
 }
 
 .text-section:hover p, .text-section:hover h2 {
   color: #1a1a1a;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  transition: color 0.5s ease, text-shadow 0.5s ease;
+  transition: color 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
 }
