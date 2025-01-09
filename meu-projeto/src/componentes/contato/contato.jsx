@@ -39,7 +39,7 @@ const Contato = () => {
     };
 
     return (
-        <div className="contato-container">
+        <div id="contato" className="contato-container">
             <div className="contato-left">
                 <h1>Entre em Contato</h1>
                 <p>

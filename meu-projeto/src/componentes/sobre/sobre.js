@@ -3,7 +3,7 @@ import './sobre.css'; // Arquivo CSS atualizado para estilização
 
 const sobre = () => {
   return (
-    <section className="sobre-nos">
+    <section id='sobre' className="sobre-nos">
       <div className="container">
         <div className="content">
           {/* Texto sobre a empresa */}
@@ -23,7 +23,7 @@ const sobre = () => {
 
           {/* Imagem ao lado direito */}
           <div className="image-content">
-            <img src={require('../../assets/limpeza-predial.jpg')} alt="Sobre Nós" />
+            <img src={require('../../assets/sobre2.png')} alt="Sobre Nós" />
           </div>
         </div>
       </div>

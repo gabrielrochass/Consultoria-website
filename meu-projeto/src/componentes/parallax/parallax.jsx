@@ -6,7 +6,7 @@ import Valores from '../valores/valores';
 
 // Caminho centralizado para imagens
 const fundoClaro = require('../../assets/fundo-claro.png');
-const notebook = require('../../assets/notebook.jpg');
+const notebook = require('../../assets/visao.png');
 
 const ParallaxComponent = () => {
   return (

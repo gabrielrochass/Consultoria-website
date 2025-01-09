@@ -29,7 +29,7 @@
 
 .text-content {
   flex: 1;
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .text-content h2 {
@@ -54,6 +54,8 @@
   font-size: 1.2em;
   line-height: 1.6;
   margin-bottom: 20px;
+  margin-right: 0;
+  text-align: justify;
 }
 
 .image-content {
@@ -69,7 +71,7 @@
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .content {
     flex-direction: column; /* Muda para layout vertical em telas menores */
   }
@@ -82,4 +84,8 @@
   .image-content {
     text-align: center;
   }
+}
+
+.image-content img {
+  width: 70%;
 }
