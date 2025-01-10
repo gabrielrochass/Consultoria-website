@@ -1,0 +1,145 @@
+/* Estilo geral */
+.sobre-nos {
+  background-color: #faf8f5; /* Cor de fundo clara e agradável */
+  padding: 4rem 2rem;
+  font-family: 'Arial', sans-serif;
+  text-align: justify;
+}
+
+.sobre-nos .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Adaptável para dispositivos menores */
+  align-items: center;
+  gap: 2rem;
+}
+
+.sobre-nos .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Texto */
+.text-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.text-content h2 {
+  font-size: 2.5rem;
+  color: #222; /* Cor de título principal */
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #e5b141;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  color: #2a2a2a;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* Imagem */
+.image-content {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Alinha a imagem ao centro */
+}
+
+/* Sombra suave e destaque na imagem */
+.image-content img {
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)); /* Sombra mais suave e uniforme */
+  margin-top: 0;
+  margin-left: 70px;
+  width: 80%;
+  border-radius: 8px; /* Adiciona bordas arredondadas */
+}
+
+.image-content img:hover {
+  transform: scale(1.05); /* Aumenta a imagem ao passar o mouse */
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.2)); /* Sombra mais perceptível */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .sobre-nos {
+    padding: 2rem 1rem;
+  }
+
+  .sobre-nos .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content h2 {
+    font-size: 2rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+
+  .image-content img {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .text-content p {
+    font-size: 0.9rem;
+  }
+
+  .contact-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    margin-bottom: 50px;
+  }
+
+    .image-content img {
+      margin-bottom: 50px;
+    }
+  }
+
+
+/* Botão de navegação com mais destaque */
+.contact-button {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 1rem 2rem; /* Aumentar o tamanho do botão */
+  font-size: 1.2rem; /* Fonte maior */
+  color: #333; /* Texto escuro */
+  background-color: #fff; /* Fundo claro */
+  border: 2px solid #ccc; /* Borda ligeiramente mais espessa */
+  border-radius: 6px; /* Bordas mais arredondadas */
+  cursor: pointer;
+  letter-spacing: 0.09em; /* Espacamento sutil entre letras */
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #9b8657;
+  color: #e5dfd3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra mais perceptível */
+  transform: translateY(-3px); /* Movimento sutil para cima */
+  transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease, color 0.5s ease; /* Transição mais suave */
+}
+
+.contact-button:active {
+  background-color: #e8e8e8; /* Fundo mais escuro no clique */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra reduzida no clique */
+  transform: scale(0.98); /* Efeito de leve redução ao pressionar */
+}
