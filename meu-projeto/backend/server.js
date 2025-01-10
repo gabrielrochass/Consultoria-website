@@ -1,83 +1,84 @@
-const express = require('express');
+const express = require("express");
+const multer = require("multer");
+const cors = require("cors");
+const fs = require("fs");
+const path = require("path");
 const sgMail = require('@sendgrid/mail');
-const cors = require('cors');
-require('dotenv').config();
+require('dotenv').config(); // Carregar variáveis de ambiente do arquivo .env
+const app = express();
 
-// Configuração da API do SendGrid
+// Defina sua chave de API do SendGrid e outros dados a partir das variáveis de ambiente
 sgMail.setApiKey(process.env.SENDGRID_API);
 
-const app = express();
-app.use(express.json());
-app.use(cors()); 
+// Diretório de uploads
+const uploadDir = path.join(__dirname, "uploads");
 
-// Função para enviar e-mails
-async function sendEmail(to, subject, text, html) {
+// Verifica se o diretório de uploads existe, caso contrário, cria
+if (!fs.existsSync(uploadDir)) {
+    fs.mkdirSync(uploadDir);
+}
+
+// Configuração do Multer para upload de arquivos
+const upload = multer({ dest: "uploads/" }); // Diretório temporário para armazenar o arquivo
+
+// Middleware de CORS para permitir requisições de outros domínios
+app.use(cors());
+
+// Middleware para lidar com dados de formulários (não JSON), pois usaremos 'form-data'
+app.use(express.urlencoded({ extended: true }));
+
+// Função para enviar e-mail com anexo via SendGrid
+const sendEmail = (nome, email, mensagem, arquivo) => {
+    // Lê o arquivo como um buffer
+    const fileBuffer = fs.readFileSync(arquivo);
+
     const msg = {
-        to, // Email do destinatário
-        from: process.env.MEU_EMAIL,
-        subject, // Assunto do email
-        text, // Texto do email
-        html, // Conteúdo HTML
+        to: process.env.EMAIL_DESTINO, // E-mail do destinatário
+        from: process.env.MEU_EMAIL, // E-mail de envio
+        subject: 'Novo contato via formulário',
+        text: `Você recebeu uma nova mensagem de ${nome} (${email}):\n\n${mensagem}`,
+        attachments: [
+            {
+                filename: path.basename(arquivo), // Nome do arquivo
+                content: fileBuffer.toString('base64'), // Conteúdo do arquivo em base64
+                type: 'application/octet-stream', // Tipo de conteúdo do arquivo
+                disposition: 'attachment', // Como o arquivo será tratado (anexo)
+            }
+        ],
     };
 
-    if (!process.env.MEU_EMAIL) {
-        throw new Error('O email remetente não está configurado no arquivo .env');
-    }
+    sgMail.send(msg)
+        .then(() => {
+            console.log('E-mail enviado com sucesso');
+        })
+        .catch((error) => {
+            console.error('Erro ao enviar o e-mail:', error);
+        });
+};
 
-    try {
-        await sgMail.send(msg);
-        console.log('Email enviado com sucesso!');
-    } catch (error) {
-        console.error('Erro ao enviar email:', error.response ? error.response.body.errors : error.message);
-        throw new Error('Erro ao enviar email');
-    }
-}
+// Rota para envio do formulário e arquivo
+app.post("/api/contact", upload.single("arquivo"), (req, res) => {
+    console.log("Arquivo recebido:", req.file); // Exibe informações sobre o arquivo recebido
+    console.log("Dados do corpo:", req.body);  // Exibe os dados do formulário (nome, email, mensagem)
 
-// Validação de email
-function isEmailValid(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-// Endpoint para envio de mensagens do formulário
-app.post('/api/contact', async (req, res) => {
     const { nome, email, mensagem } = req.body;
 
-    if (!nome || !email || !mensagem) {
-        return res.status(400).json({ error: 'Todos os campos são obrigatórios' });
+    // Validação: Verifica se todos os campos necessários foram enviados
+    if (!nome || !email || !mensagem || !req.file) {
+        return res.status(400).json({ error: "Todos os campos são obrigatórios." });
     }
 
-    if (!isEmailValid(email)) {
-        return res.status(400).json({ error: 'Email inválido' });
-    }
+    // Caminho do arquivo que foi carregado
+    const destinationPath = path.join(uploadDir, req.file.originalname);
+    fs.renameSync(req.file.path, destinationPath);
 
-    const assunto = `Nova mensagem de ${nome}`;
-    const conteudoHtml = `
-        <p><strong>Nome:</strong> ${nome}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Mensagem:</strong></p>
-        <p>${mensagem}</p>
-    `;
+    // Enviar o e-mail com os dados e o arquivo anexo
+    sendEmail(nome, email, mensagem, destinationPath);
 
-    try {
-        await sendEmail(
-            process.env.EMAIL_DESTINO,
-            assunto,
-            mensagem,
-            conteudoHtml
-        );
-        res.status(200).json({ message: 'Mensagem enviada com sucesso!' });
-    } catch (error) {
-        res.status(500).json({ error: 'Erro ao enviar mensagem: ' + error.message });
-    }
+    // Resposta de sucesso
+    res.status(200).json({ message: "Mensagem enviada com sucesso!" });
 });
 
-// Middleware para erros não tratados
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).json({ error: 'Ocorreu um erro no servidor' });
-});
-
-// Inicia o servidor
-const PORT = process.env.PORT || 5000;
+// Inicia o servidor na porta 5000
+const PORT = 5000;
 app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));

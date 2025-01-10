@@ -8,6 +8,7 @@ const Contato = () => {
         email: '',
         mensagem: ''
     });
+    const [file, setFile] = useState(null);
     const [status, setStatus] = useState('');
 
     const handleChange = (e) => {
@@ -15,28 +16,43 @@ const Contato = () => {
         setFormData({ ...formData, [name]: value });
     };
 
+    const handleFileChange = (e) => {
+        setFile(e.target.files[0]); // Armazena o arquivo selecionado
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setStatus('Enviando...');
-
+    
+        const form = new FormData();
+        form.append("nome", formData.nome);
+        form.append("email", formData.email);
+        form.append("mensagem", formData.mensagem);
+        if (file) {
+            form.append("arquivo", file);
+        }
+    
         try {
-            const response = await fetch('http://localhost:5000/api/contact', { 
+            const response = await fetch('http://localhost:5000/api/contact', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
+                body: form,
             });
-
+    
             if (response.ok) {
                 setStatus('Mensagem enviada com sucesso!');
                 setFormData({ nome: '', email: '', mensagem: '' });
+                setFile(null);
             } else {
-                setStatus('Erro ao enviar a mensagem.');
+                const errorResponse = await response.json();
+                setStatus(`Erro ao enviar a mensagem: ${errorResponse.error}`);
             }
         } catch (error) {
             console.error(error);
             setStatus('Erro ao enviar a mensagem. Verifique sua conexão.');
         }
     };
+    
+    
 
     return (
         <div className="contato-container">
@@ -62,7 +78,7 @@ const Contato = () => {
             </div>
             <div className="contato-right">
                 <h2>Envie sua Mensagem</h2>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} encType="multipart/form-data">
                     <div className="form-group">
                         <label htmlFor="nome">Nome</label>
                         <input
@@ -97,6 +113,15 @@ const Contato = () => {
                             value={formData.mensagem}
                             onChange={handleChange}
                             required
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="arquivo">Anexar Arquivo</label>
+                        <input
+                            type="file"
+                            id="arquivo"
+                            name="arquivo"
+                            onChange={handleFileChange}
                         />
                     </div>
                     <button type="submit" className="btn-enviar">Enviar</button>
