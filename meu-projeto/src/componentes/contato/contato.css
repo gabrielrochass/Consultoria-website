@@ -105,7 +105,7 @@ textarea {
 }
 
 .btn-enviar {
-    background-color: #e5b141;
+    background-color: #9b8657;
     color: white;
     font-size: 1rem;
     padding: 10px 20px;
@@ -114,10 +114,11 @@ textarea {
     cursor: pointer;
     transition: background-color 0.3s ease;
     float: right;
+    margin-top: -65px;
 }
 
 .btn-enviar:hover {
-    background-color: #d4a038;
+    background-color: #8c7950;
 }
 
 @media (max-width: 768px) {
@@ -176,3 +177,44 @@ textarea {
         padding: 8px 16px;
     }
 }
+/* Estilo para o label (botão de anexar) */
+.custom-label {
+    color: #333; /* Texto escuro */
+    background-color: #fff; /* Fundo claro */
+    border:  1px solid #ccc;;
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; /* Aponta o cursor como mão */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    display: inline-block; /* Faz o label se comportar como um botão */
+    transition: background-color 0.3s ease; /* Transição suave para hover */
+}
+
+/* Estilo para o label quando o mouse passa por cima (hover) */
+.custom-label:hover {
+    background-color: #9b8657;
+    color: #e5dfd3;
+}
+
+/* Esconde o input de tipo file */
+.custom-input-file {
+    display: none; /* Esconde o campo de escolha de arquivo */
+}
+
+/* Estilo para o nome do arquivo carregado */
+.file-name {
+    display: block; /* Exibe o nome do arquivo abaixo do botão */
+    margin-top: 10px; /* Espaçamento entre o botão e o nome do arquivo */
+    font-size: 14px; /* Tamanho da fonte do nome */
+    color: #333; /* Cor do nome do arquivo */
+    font-style: italic; /* Estilo itálico para o nome do arquivo */
+}
+
+/* Estilo para quando o arquivo é carregado */
+.file-uploaded {
+    background-color: #45a049; /* Cor de fundo quando o arquivo for carregado */
+    color: white; /* Cor do texto após o arquivo ser carregado */
+    border-color: #388e3c; /* Cor da borda após o arquivo ser carregado */
+}
+
+

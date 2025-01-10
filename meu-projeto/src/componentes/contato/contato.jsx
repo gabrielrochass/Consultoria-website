@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaAddressBook, FaInstagram } from 'react-icons/fa';
 import './contato.css';
 
 const Contato = () => {
@@ -16,9 +16,23 @@ const Contato = () => {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleFileChange = (e) => {
-        setFile(e.target.files[0]); // Armazena o arquivo selecionado
+    const handleFileChange = (event) => {
+        const fileInput = event.target;
+        const fileNameDisplay = document.getElementById('file-name');
+    
+        if (fileInput.files.length > 0) {
+            const fileName = fileInput.files[0].name;
+    
+            // Atualiza o nome do arquivo no display
+            fileNameDisplay.textContent = `Arquivo Selecionado: ${fileName}`;
+    
+            // Modifica o botão para indicar que o arquivo foi carregado
+            const label = document.querySelector('label[for="arquivo"]');
+            label.classList.add('file-uploaded'); // Aplica a classe de "upload concluído"
+        }
+        setFile(event.target.files[0]); // Armazena o arquivo selecionado
     };
+    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -62,17 +76,11 @@ const Contato = () => {
                     Estamos aqui para ajudar! Conecte-se conosco através das redes sociais ou preencha o formulário ao lado para nos enviar uma mensagem.
                 </p>
                 <div className="social-links">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                        <FaFacebook /> Facebook
-                    </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                        <FaTwitter /> Twitter
-                    </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/smterceirizacaoeservicos/" target="_blank" rel="noopener noreferrer">
                         <FaInstagram /> Instagram
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin /> LinkedIn
+                    <a href="linktr.ee/smterceirizacaoeservicos" target="_blank" rel="noopener noreferrer">
+                        <FaAddressBook /> Linktr.ee
                     </a>
                 </div>
             </div>
@@ -116,13 +124,15 @@ const Contato = () => {
                         />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="arquivo">Anexar Arquivo</label>
+                        <label htmlFor="arquivo" class="custom-label">Anexar Currículo ou Proposta</label>
                         <input
                             type="file"
                             id="arquivo"
                             name="arquivo"
                             onChange={handleFileChange}
+                            class="custom-input-file"
                         />
+                        <span id="file-name" class="file-name"></span>
                     </div>
                     <button type="submit" className="btn-enviar">Enviar</button>
                 </form>
