@@ -37,6 +37,9 @@ const Footer = () => {
               <a href="https://linktr.ee/smterceirizacaoeservicos?fbclid=PAZXh0bgNhZW0CMTEAAaab35ZGr9F8TNxebnEHPYXw7v3HUm7nl_GDgv1HqJMQ10TLCLux18064eY_aem_21WbHs4hRglqjYBmAnZXyA" target="_blank" rel="noopener noreferrer">
                   Linktr.ee
               </a>
+              <a href="https://api.whatsapp.com/send/?phone=55081986454808&text=Ol%C3%A1%21+Gostaria+de+conversar.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                  WhatsApp
+              </a>
           </div> 
         </div>
       </div>

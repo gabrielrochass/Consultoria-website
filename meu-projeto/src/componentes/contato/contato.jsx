@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaAddressBook, FaInstagram } from 'react-icons/fa';
+import { FaAddressBook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import './contato.css';
 
 const Contato = () => {
@@ -69,7 +69,7 @@ const Contato = () => {
     
 
     return (
-        <div className="contato-container">
+        <div id="contato" className="contato-container">
             <div className="contato-left">
                 <h1>Entre em Contato</h1>
                 <p>
@@ -79,8 +79,11 @@ const Contato = () => {
                     <a href="https://www.instagram.com/smterceirizacaoeservicos/" target="_blank" rel="noopener noreferrer">
                         <FaInstagram /> Instagram
                     </a>
-                    <a href="linktr.ee/smterceirizacaoeservicos" target="_blank" rel="noopener noreferrer">
+                    <a href="https://linktr.ee/smterceirizacaoeservicos?fbclid=PAZXh0bgNhZW0CMTEAAaZwQ3_xRpk4LO9hHFTfz5g1GATpFGsIwrf3GBA5SmtxHCFQIAYk7yByI80_aem_K6HvOLNJCG1ms5WQXXSx0w" target="_blank" rel="noopener noreferrer">
                         <FaAddressBook /> Linktr.ee
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=55081986454808&text=Ol%C3%A1%21+Gostaria+de+conversar.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                        <FaWhatsapp /> WhatsApp
                     </a>
                 </div>
             </div>

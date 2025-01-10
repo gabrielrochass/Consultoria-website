@@ -40,7 +40,7 @@ const Slider = () => {
     useEffect(() => {
         const slideInterval = setInterval(() => {
             setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-        }, 18000);
+        }, 10000);
 
         return () => clearInterval(slideInterval);
     }, []);
