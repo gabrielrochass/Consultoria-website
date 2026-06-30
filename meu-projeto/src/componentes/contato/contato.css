@@ -1,0 +1,228 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.contato-container {
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    min-height: 80vh;
+    width: 100%;
+}
+
+.contato-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.contato-left h1 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 20px;
+    border-left: 5px solid #e5b141;
+    padding-left: 15px;
+}
+
+.contato-left p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #e5b141;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links a:hover {
+    color: #d4a038;
+}
+
+.contato-right {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contato-right h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #e5b141;
+    box-shadow: 0 0 5px rgba(229, 177, 65, 0.5);
+}
+
+textarea {
+    resize: none;
+}
+
+.btn-enviar {
+    background-color: #9b8657;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    float: right;
+    margin-top: -65px;
+}
+
+.btn-enviar:hover {
+    background-color: #8c7950;
+}
+
+@media (max-width: 768px) {
+    .contato-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .contato-left,
+    .contato-right {
+        flex: none;
+        width: 100%;
+    }
+
+    .contato-left h1 {
+        font-size: 2rem;
+    }
+
+    .contato-left p {
+        font-size: 1rem;
+    }
+
+    .social-links a {
+        font-size: 1rem;
+    }
+
+    .contato-right h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contato-container {
+        padding: 30px;
+    }
+
+    .contato-left h1 {
+        font-size: 1.5rem;
+    }
+
+    .contato-left p {
+        font-size: 0.9rem;
+    }
+
+    .social-links a {
+        font-size: 0.9rem;
+    }
+
+    .contato-right h2 {
+        font-size: 1.2rem;
+    }
+
+    .btn-enviar {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        margin-top: 5px;
+        margin-right: 200px;
+    }
+
+    .custom-label {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    
+}
+/* Estilo para o label (botão de anexar) */
+.custom-label {
+    color: #333; /* Texto escuro */
+    background-color: #fff; /* Fundo claro */
+    border:  1px solid #ccc;;
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; /* Aponta o cursor como mão */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Bordas arredondadas */
+    display: inline-block; /* Faz o label se comportar como um botão */
+    transition: background-color 0.3s ease; /* Transição suave para hover */
+}
+
+/* Estilo para o label quando o mouse passa por cima (hover) */
+.custom-label:hover {
+    background-color: #9b8657;
+    color: #e5dfd3;
+}
+
+/* Esconde o input de tipo file */
+.custom-input-file {
+    display: none; /* Esconde o campo de escolha de arquivo */
+}
+
+/* Estilo para o nome do arquivo carregado */
+.file-name {
+    display: block; /* Exibe o nome do arquivo abaixo do botão */
+    margin-top: 10px; /* Espaçamento entre o botão e o nome do arquivo */
+    font-size: 14px; /* Tamanho da fonte do nome */
+    color: #333; /* Cor do nome do arquivo */
+    font-style: italic; /* Estilo itálico para o nome do arquivo */
+}
+
+/* Estilo para quando o arquivo é carregado */
+.file-uploaded {
+    background-color: #45a049; /* Cor de fundo quando o arquivo for carregado */
+    color: white; /* Cor do texto após o arquivo ser carregado */
+    border-color: #388e3c; /* Cor da borda após o arquivo ser carregado */
+}
+
+

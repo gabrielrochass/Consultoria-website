@@ -1,0 +1,171 @@
+#servicos h1 {
+    color: #222;
+    margin-bottom: 2.3em;
+    font-size: 3em;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #e5b141;
+    display: inline-block;
+    padding-bottom: 0.5em;
+    margin-top: 0.8em;
+    text-align: left;
+    margin-left: -48rem;
+}
+
+.services-section {
+    padding: 3em 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+    margin-top: -20px;
+}
+
+.custom-card {
+    position: relative;
+    background: #f9f9f9;
+    border-left: 4px solid #e5b141;
+    padding: 1.5em;
+    width: 100%;
+    max-width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: -30px;
+}
+
+.custom-card:hover {
+    transform: translateY(-0.3em);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.img-box {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.5em;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.custom-card:hover .img-box img {
+    transform: scale(1.1);
+}
+
+.custom-content h2 {
+    color: #444;
+    margin-bottom: 1em;
+    font-size: 1.8em;
+    position: relative;
+    text-align: left;
+}
+
+.custom-content h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.3em;
+    width: 50px;
+    height: 3px;
+    background-color: #e5b141;
+}
+
+.custom-content p {
+    line-height: 1.8;
+    font-size: 1em;
+    color: #555;
+    text-align: justify;
+}
+
+.custom-content a {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background-color: #e5b141;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.custom-content a:hover {
+    background-color: #c99d35;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    #servicos h1 {
+        font-size: 2.5em;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .services-section {
+        padding: 2em 1em;
+    }
+
+    .custom-card {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .custom-content h2 {
+        font-size: 1.5em;
+    }
+
+    .img-box {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    #servicos h1 {
+        font-size: 2em;
+        margin-top: 50px;
+    }
+
+    .services-section {
+        padding: 1.5em 0.5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .custom-card {
+        margin-left: 0;
+        max-width: 75%;
+        align-self: center;
+        margin-bottom: 1rem;
+    }
+
+    .custom-content h2 {
+        font-size: 1.2em;
+    }
+
+    .img-box {
+        height: 120px;
+    }
+
+    .custom-content p {
+        font-size: 0.9em;
+    }
+
+    .custom-content a {
+        padding: 0.5em 0.75em;
+    }
+}
