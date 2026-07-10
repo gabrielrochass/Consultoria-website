@@ -1,7 +1,13 @@
 * {
   font-family: sans-serif;
-  margin: 00px;
-  padding: 0px;
-  /* background-image: url('./assets/fundo-claro.png'); */
-  /* overflow-x: hidden; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
 }

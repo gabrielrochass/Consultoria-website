@@ -8,7 +8,7 @@ const Servicos = () => {
             <div className="container">
                 <div className="custom-card">
                     <div className="img-box">
-                        <img src={require('../../assets/solange3.png')} alt="Consultoria em gestão empresarial" />
+                        <img src={require('../../assets/solange3.webp')} alt="Consultoria em gestão empresarial" loading="lazy" decoding="async" />
                     </div>
                     <div className="custom-content">
                         <h2>Consultoria em Gestão de Contratos</h2>
@@ -17,7 +17,7 @@ const Servicos = () => {
                 </div>
                 <div className="custom-card">
                     <div className="img-box">
-                    <img src={require('../../assets/conserv.png')} alt="Limpeza e Conservação" />
+                    <img src={require('../../assets/limp_predial.webp')} alt="Limpeza Predial" loading="lazy" decoding="async" />
                     </div>
                     <div className="custom-content">
                         <h2>Limpeza Predial</h2>
@@ -26,7 +26,7 @@ const Servicos = () => {
                 </div>
                 <div className="custom-card">
                     <div className="img-box">
-                    <img src={require('../../assets/portaria.png')} alt="Portaria" />
+                    <img src={require('../../assets/portaria.webp')} alt="Portaria" loading="lazy" decoding="async" />
                     </div>
                     <div className="custom-content">
                         <h2>Portaria</h2>
@@ -35,7 +35,7 @@ const Servicos = () => {
                 </div>
                 <div className="custom-card">
                     <div className="img-box">
-                    <img src={require('../../assets/esp.png')} alt="Manutenção Predial" />
+                    <img src={require('../../assets/porteiro.webp')} alt="Recepção" loading="lazy" decoding="async" />
                     </div>
                     <div className="custom-content">
                         <h2>Recepção</h2>
@@ -44,7 +44,7 @@ const Servicos = () => {
                 </div>
                 <div className="custom-card">
                     <div className="img-box">
-                        <img src={require('../../assets/hosp.png')} alt="Limpeza Hospitalar" />
+                        <img src={require('../../assets/hosp.webp')} alt="Limpeza Hospitalar" loading="lazy" decoding="async" />
                     </div>
                     <div className="custom-content">
                         <h2>Limpeza Hospitalar</h2>
@@ -53,7 +53,7 @@ const Servicos = () => {
                 </div>
                 <div className="custom-card">
                     <div className="img-box">
-                        <img src={require('../../assets/esp2.png')} alt="Serviços Especializados" />
+                        <img src={require('../../assets/esp2.webp')} alt="Serviços Especializados" loading="lazy" decoding="async" />
                     </div>
                     <div className="custom-content">
                         <h2>Serviços Especializados</h2>

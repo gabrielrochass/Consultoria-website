@@ -4,31 +4,31 @@ import './slider.css';
 const slides = [
     {
         id: 1,
-        image: require('../../assets/capaa.png'),
+        image: require('../../assets/capaa.webp'),
         title: 'Soluções Eficientes para o seu Negócio',
         description: 'Oferecemos serviços terceirizados com excelência, agilidade e a confiança que sua empresa merece. Soluções personalizadas em terceirização de mão de obra e consultoria empresarial podem elevar o desempenho do seu negócio.',
     },
     {
         id: 2,
-        image: require('../../assets/capa2.png'),
+        image: require('../../assets/capa2.webp'),
         title: 'Equipe Especializada',
         description: 'Contamos com profissionais capacitados e comprometidos em oferecer soluções de alta qualidade. Com treinamento constante e foco em eficiência, nossa equipe está preparada para atender às suas necessidades.',
     },
     {
         id: 3,
-        image: require('../../assets/seguranca2.png'),
+        image: require('../../assets/seguranca2.webp'),
         title: 'Segurança e Bem-estar no seu Ambiente de Trabalho',
         description: 'Com a SM Terceirização e Serviços, você tem a confiança de que sua equipe está sendo cuidada em todos os aspectos, com soluções personalizadas para garantir a segurança, o bem-estar e a proteção do colaborador no ambiente de trabalho.',
     },
     {
         id: 4,
-        image: require('../../assets/resp.png'),
+        image: require('../../assets/resp.webp'),
         title: 'Responsabilidade Social',
         description: 'Estamos focados em adotar práticas que promovam o bem-estar das pessoas e a sustentabilidade, valorizando nossos colaboradores e o ambiente.',
     },
     {
         id: 5,
-        image: require('../../assets/capa4.png'),
+        image: require('../../assets/capa4.webp'),
         title: 'Consultoria em Gestão de Contratos',
         description: 'Nossos consultores garantem a gestão eficiente, cumprimento de prazos e conformidade legal em cada etapa do processo, desde a elaboração até a renovação.',
     },
@@ -36,6 +36,16 @@ const slides = [
 
 const Slider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [loadedSlides, setLoadedSlides] = useState(() => new Set([0]));
+
+    useEffect(() => {
+        setLoadedSlides((prev) => {
+            if (prev.has(currentSlide)) return prev;
+            const next = new Set(prev);
+            next.add(currentSlide);
+            return next;
+        });
+    }, [currentSlide]);
 
     useEffect(() => {
         const slideInterval = setInterval(() => {
@@ -63,7 +73,7 @@ const Slider = () => {
                 <div
                     key={slide.id}
                     className={`slide ${index === currentSlide ? 'active' : ''}`}
-                    style={{ backgroundImage: `url(${slide.image})` }}
+                    style={loadedSlides.has(index) ? { backgroundImage: `url(${slide.image})` } : undefined}
                 >
                     {index === currentSlide && (
                         <div className="slide-content">

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaAddressBook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { API_URL } from '../../config';
 import './contato.css';
 
 const Contato = () => {
@@ -47,7 +48,7 @@ const Contato = () => {
         }
     
         try {
-            const response = await fetch('http://localhost:5000/api/contact', {
+            const response = await fetch(`${API_URL}/api/contact`, {
                 method: 'POST',
                 body: form,
             });

@@ -17,7 +17,7 @@
     .parallax-section {
         padding: 10px;
         background-attachment: scroll; /* Desativa o parallax */
-        background-image: url('../../assets/visao.png'); /* Substitua pelo caminho da sua imagem */
+        background-image: url('../../assets/visao.webp');
     }
     
     .valores-section,
@@ -27,7 +27,7 @@
     
     .servicos-section {
         background-attachment: scroll; /* Desativa o parallax */
-        background-image: url('../../assets/fundo-claro.png'); /* Substitua pelo caminho da sua imagem */
+        background-image: url('../../assets/fundo-claro.webp');
     }
     
     .servicos-section {
@@ -39,7 +39,7 @@
     .parallax-section {
         padding: 5px;
         background-attachment: scroll; /* Desativa o parallax */
-        background-image: url('../../assets/visao.png'); /* Substitua pelo caminho da sua imagem */
+        background-image: url('../../assets/visao.webp');
     }
 
     .valores-section,
