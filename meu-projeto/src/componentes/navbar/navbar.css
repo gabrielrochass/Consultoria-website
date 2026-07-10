@@ -52,6 +52,21 @@ nav {
   color: #E7DCC9;
 }
 
+.menu li .denuncia-link {
+  color: #e5b141;
+  font-weight: bold;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.menu li .denuncia-link:hover {
+  color: #d4a038;
+}
+
 .menu li a::after {
   content: '';
   position: absolute;

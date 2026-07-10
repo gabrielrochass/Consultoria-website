@@ -2,11 +2,18 @@ import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import './navbar.css';
 
-export default function Navbar() {
+export default function Navbar({ onOpenDenuncia }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+    };
+
+    const handleDenunciaClick = () => {
+        onOpenDenuncia();
+        if (isOpen) {
+            setIsOpen(false);
+        }
     };
 
     return (
@@ -14,7 +21,7 @@ export default function Navbar() {
             <div id='home' className="navbar-left">
                 <div id='home' className="logo">
                     <a href="#home">
-                        <img src={require('../../assets/logo-noback.png')} alt="Logo" />
+                        <img src={require('../../assets/logo-noback.webp')} alt="Logo" />
                     </a>
                 </div>
                 <div className="hamburger" onClick={toggleMenu}>
@@ -29,6 +36,7 @@ export default function Navbar() {
                 <li><Link to="sobre" smooth={true} duration={650} onClick={toggleMenu}>Sobre</Link></li>
                 <li><Link to="servicos" smooth={true} duration={1200} onClick={toggleMenu}>Serviços</Link></li>
                 <li><Link to="contato" smooth={true} duration={2000} onClick={toggleMenu}>Contato</Link></li>
+                <li><button type="button" className="denuncia-link" onClick={handleDenunciaClick}>Canal de Denúncias</button></li>
             </ul>
         </nav>
     );

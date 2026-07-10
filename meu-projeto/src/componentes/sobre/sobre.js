@@ -25,7 +25,7 @@ const sobre = () => {
 
           {/* Imagem ao lado direito */}
           <div className="image-content">
-            <img src={require('../../assets/sobre2.png')} alt="Sobre Nós" />
+            <img src={require('../../assets/sobre2.webp')} alt="Sobre Nós" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>

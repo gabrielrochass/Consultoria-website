@@ -5,8 +5,8 @@ import Valores from '../valores/valores';
 import './parallax.css';
 
 // Caminho centralizado para imagens
-const fundoClaro = require('../../assets/fundo-claro.png');
-const notebook = require('../../assets/visao.png');
+const fundoClaro = require('../../assets/fundo-claro.webp');
+const notebook = require('../../assets/visao.webp');
 
 const ParallaxComponent = () => {
   return (

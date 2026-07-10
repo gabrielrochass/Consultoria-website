@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-section">
           <div className="footer-logo">
-            <img src={require('../../assets/logo-noback.png')} alt="Logo" />
+            <img src={require('../../assets/logo-noback.webp')} alt="Logo" loading="lazy" decoding="async" />
           </div>
           <div className="footer-info">
             <p>SM Terceirização e Serviços: Eficiência e qualidade para impulsionar o seu negócio.</p>
