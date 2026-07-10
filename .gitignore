@@ -1,0 +1,24 @@
+# dependencies (qualquer profundidade: raiz, meu-projeto, backend)
+node_modules/
+.pnp
+.pnp.js
+
+# build de produção
+build/
+
+# variáveis de ambiente com segredos (mantém .env.production/.development versionados)
+.env
+.env.local
+.env.*.local
+
+# uploads gerados pelo usuário (podem conter PII)
+meu-projeto/backend/uploads/
+
+# testing
+coverage/
+
+# misc
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
