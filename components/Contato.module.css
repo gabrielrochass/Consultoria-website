@@ -1,0 +1,181 @@
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.left,
+.right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.left h2 {
+  font-size: 2.5rem;
+  color: var(--ink);
+  border-left: 5px solid var(--gold);
+  padding-left: 15px;
+  margin-bottom: 1.25rem;
+}
+
+.left > p {
+  font-size: 1.15rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-bottom: 2rem;
+}
+
+.social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: fit-content;
+  font-size: 1.1rem;
+  color: var(--gold);
+  transition: color 0.3s ease;
+}
+
+.social a:hover {
+  color: var(--gold-dark);
+}
+
+.curriculo {
+  padding: 1.25rem;
+  background: var(--bg-warm);
+  border-radius: 10px;
+  border: 1px solid #eee;
+}
+
+.curriculo p {
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 0.9rem;
+}
+
+.whatsBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.3rem;
+  background: #25d366;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.whatsBtn:hover {
+  background: #1fb457;
+  transform: translateY(-2px);
+}
+
+.right {
+  background: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.right h3 {
+  font-size: 1.8rem;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.group {
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.group label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.4rem;
+}
+
+.group input,
+.group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.group input:focus,
+.group textarea:focus {
+  border-color: var(--gold);
+  box-shadow: var(--gold-glow);
+}
+
+.group textarea {
+  resize: vertical;
+}
+
+.submit {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  background: var(--brown);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--brown-dark);
+}
+
+.submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.status {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.ok {
+  color: #2e7d32;
+}
+
+.error {
+  color: #c62828;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 3rem 1.25rem;
+  }
+
+  .left h2 {
+    font-size: 2rem;
+  }
+
+  .right {
+    padding: 1.75rem;
+  }
+}

@@ -1,0 +1,44 @@
+.parallax {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.parallax::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.valores::before {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.servicos::before {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--max-w);
+}
+
+@media (max-width: 768px) {
+  .parallax {
+    background-attachment: scroll;
+    padding: 48px 16px;
+  }
+
+  .servicos::before {
+    background: rgba(255, 255, 255, 0.92);
+  }
+}
