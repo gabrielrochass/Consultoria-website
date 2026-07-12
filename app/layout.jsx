@@ -1,10 +1,10 @@
-import { Playfair_Display, Montserrat } from 'next/font/google';
+import { Poppins, Montserrat } from 'next/font/google';
 import AosInit from '@/components/AosInit';
 import './globals.css';
 
-const playfair = Playfair_Display({
+const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['600', '700'],
+  weight: ['500', '600', '700'],
   variable: '--font-heading',
   display: 'swap',
 });
@@ -43,7 +43,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR" className={`${playfair.variable} ${montserrat.variable}`}>
+    <html lang="pt-BR" className={`${poppins.variable} ${montserrat.variable}`}>
       <body>
         <AosInit />
         {children}

@@ -1,49 +1,45 @@
 # SM Terceirização e Serviços — Site institucional
 
-Site em **Next.js (App Router)**, deploy em **Vercel**. Formulários (contato e canal de
-denúncias) funcionam via **API routes serverless** com **Resend** — sem backend separado.
+Site em **Next.js (App Router)**, **100% estático**, deploy em **Vercel**. Os formulários
+(contato e canal de denúncias) montam a mensagem e abrem o **WhatsApp** da empresa — sem
+backend, sem banco, sem variáveis de ambiente.
 
 ## Stack
 
 - Next.js 14 (App Router) + React 18
 - CSS Modules + design tokens (`app/globals.css`)
-- `next/font` (Playfair Display + Montserrat)
+- `next/font` (Poppins nos títulos + Montserrat no corpo)
 - react-icons, AOS (animações de scroll)
-- Resend (envio de e-mail dos formulários)
 
 ## Rodar localmente
 
 ```bash
 npm install
-cp .env.example .env.local   # preencha as chaves
-npm run dev                   # http://localhost:3000
+npm run dev    # http://localhost:3000
 ```
 
-### Variáveis de ambiente (`.env.local` e Vercel)
+Não há variáveis de ambiente — o site é estático.
 
-| Var | Descrição |
-|-----|-----------|
-| `RESEND_API_KEY` | Chave da API do [Resend](https://resend.com) |
-| `MAIL_FROM` | Remetente verificado, ex: `SM Terceirização <contato@smterceirizacaoeservicos.com>` |
-| `MAIL_TO_DENUNCIA` | E-mail que recebe as denúncias |
-| `MAIL_TO_CONTATO` | E-mail que recebe as mensagens de contato |
+## Formulários
+
+Contato e Canal de Denúncias montam um texto com os campos preenchidos e abrem
+`https://wa.me/55081986454808?text=...` numa nova aba. O número fica centralizado em
+`lib/whatsapp.js`.
 
 ## Estrutura
 
 ```
-app/            layout, page (home), globals.css, api/{denuncia,contato}
+app/            layout, page (home), globals.css
 components/     seções (Navbar, Hero, Sobre, Valores, Servicos, Contato, Footer, DenunciaModal...)
-lib/mailer.js   helper do Resend
+lib/whatsapp.js helper do link do WhatsApp
 public/images/  imagens .webp
 ```
 
 ## Deploy (Vercel + domínio)
 
-1. **Resend:** criar conta → verificar o domínio `smterceirizacaoeservicos.com` (adicionar os
-   registros DNS no painel da Hostinger) → copiar a `RESEND_API_KEY`.
-2. **Vercel:** importar este repositório (framework Next.js detectado automaticamente) →
-   configurar as env vars acima → deploy.
-3. **Domínio:** em Vercel → Settings → Domains, adicionar `smterceirizacaoeservicos.com` e `www`.
+1. **Vercel:** importar este repositório (framework Next.js detectado automaticamente) → deploy.
+   Não precisa configurar nenhuma variável de ambiente.
+2. **Domínio:** em Vercel → Settings → Domains, adicionar `smterceirizacaoeservicos.com` e `www`.
    No DNS da Hostinger, apontar `A @ → 76.76.21.21` e `CNAME www → cname.vercel-dns.com`
    (ou o que a Vercel indicar).
-4. Pronto: cada `git push` na branch de produção dispara deploy automático.
+3. Cada `git push` na branch de produção dispara deploy automático.

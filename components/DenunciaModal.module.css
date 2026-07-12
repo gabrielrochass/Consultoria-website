@@ -18,7 +18,7 @@
   width: 100%;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-soft);
   animation: slideIn 0.3s ease;
 }
 
@@ -79,13 +79,12 @@
   font-size: 1rem;
   font-family: inherit;
   outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 
 .group input:focus,
 .group textarea:focus {
   border-color: var(--gold);
-  box-shadow: var(--gold-glow);
 }
 
 .group textarea {
@@ -93,6 +92,10 @@
 }
 
 .submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   width: 100%;
   padding: 0.85rem 1.5rem;
   margin-top: 0.5rem;
@@ -103,30 +106,22 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.submit:hover:not(:disabled) {
+.submit:hover {
   background: var(--brown-dark);
 }
 
-.submit:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
+.submit:active {
+  transform: scale(0.98);
 }
 
 .status {
   margin-top: 1rem;
   text-align: center;
-  font-size: 1rem;
-}
-
-.ok {
+  font-size: 0.95rem;
   color: #2e7d32;
-}
-
-.error {
-  color: #c62828;
 }
 
 @media (max-width: 768px) {

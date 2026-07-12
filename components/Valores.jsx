@@ -32,8 +32,8 @@ export default function Valores() {
         compromisso social.
       </p>
       <div className={styles.grid}>
-        {items.map(({ key, Icon, title, text }) => (
-          <article key={key} className={styles.item}>
+        {items.map(({ key, Icon, title, text }, i) => (
+          <article key={key} className={styles.item} data-aos="fade-up" data-aos-delay={i * 120}>
             <div className={`${styles.circle} ${styles[key]}`}>
               <Icon aria-hidden="true" />
             </div>

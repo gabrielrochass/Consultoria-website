@@ -84,7 +84,7 @@
   background: var(--bg-card);
   padding: 2.5rem;
   border-radius: 12px;
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-soft);
 }
 
 .right h3 {
@@ -115,13 +115,12 @@
   font-size: 1rem;
   font-family: inherit;
   outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 
 .group input:focus,
 .group textarea:focus {
   border-color: var(--gold);
-  box-shadow: var(--gold-glow);
 }
 
 .group textarea {
@@ -129,7 +128,10 @@
 }
 
 .submit {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   width: 100%;
   padding: 0.8rem 1.5rem;
   background: var(--brown);
@@ -139,30 +141,22 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.submit:hover:not(:disabled) {
+.submit:hover {
   background: var(--brown-dark);
 }
 
-.submit:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
+.submit:active {
+  transform: scale(0.98);
 }
 
 .status {
   margin-top: 1rem;
   text-align: center;
-  font-size: 1rem;
-}
-
-.ok {
+  font-size: 0.95rem;
   color: #2e7d32;
-}
-
-.error {
-  color: #c62828;
 }
 
 @media (max-width: 768px) {

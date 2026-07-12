@@ -1,8 +1,8 @@
 import { FaInstagram, FaWhatsapp, FaAddressBook } from 'react-icons/fa';
+import { buildWhatsAppUrl } from '@/lib/whatsapp';
 import styles from './Footer.module.css';
 
-const WHATSAPP =
-  'https://api.whatsapp.com/send/?phone=55081986454808&text=Ol%C3%A1%21+Gostaria+de+conversar.&type=phone_number&app_absent=0';
+const WHATSAPP = buildWhatsAppUrl('Olá! Gostaria de conversar.');
 const INSTAGRAM = 'https://www.instagram.com/smterceirizacaoeservicos/';
 const LINKTREE = 'https://linktr.ee/smterceirizacaoeservicos';
 

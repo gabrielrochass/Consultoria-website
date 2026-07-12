@@ -52,24 +52,38 @@
   justify-content: center;
   font-size: 2.2rem;
   color: #fff;
-  box-shadow: var(--shadow-sm);
   transition: transform 0.3s ease;
+  animation: floatY 4.5s ease-in-out infinite;
+}
+
+@keyframes floatY {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
 }
 
 .item:hover .circle {
+  animation: none;
   transform: scale(1.08);
 }
 
 .missao {
   background: var(--bronze-dark);
+  animation-delay: 0s;
 }
 
 .visao {
   background: var(--tan);
+  animation-delay: 0.7s;
 }
 
 .valores {
   background: var(--bronze);
+  animation-delay: 1.4s;
 }
 
 .item h3 {

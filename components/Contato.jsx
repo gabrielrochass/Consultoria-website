@@ -2,43 +2,28 @@
 
 import { useState } from 'react';
 import { FaInstagram, FaWhatsapp, FaAddressBook } from 'react-icons/fa';
+import { buildWhatsAppUrl } from '@/lib/whatsapp';
 import styles from './Contato.module.css';
 
 const INSTAGRAM = 'https://www.instagram.com/smterceirizacaoeservicos/';
 const LINKTREE = 'https://linktr.ee/smterceirizacaoeservicos';
-const WHATSAPP =
-  'https://api.whatsapp.com/send/?phone=55081986454808&text=Ol%C3%A1%21+Gostaria+de+conversar.&type=phone_number&app_absent=0';
-const WHATSAPP_CURRICULO =
-  'https://api.whatsapp.com/send/?phone=55081986454808&text=Ol%C3%A1%21+Gostaria+de+enviar+meu+curr%C3%ADculo.&type=phone_number&app_absent=0';
+const WHATSAPP = buildWhatsAppUrl('Olá! Gostaria de conversar.');
+const WHATSAPP_CURRICULO = buildWhatsAppUrl('Olá! Gostaria de enviar meu currículo.');
 
 const initialForm = { nome: '', email: '', mensagem: '' };
 
 export default function Contato() {
   const [form, setForm] = useState(initialForm);
-  const [status, setStatus] = useState(null);
-  const sending = status?.type === 'loading';
+  const [status, setStatus] = useState('');
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus({ type: 'loading', msg: 'Enviando...' });
-    try {
-      const res = await fetch('/api/contato', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
-      const data = await res.json().catch(() => ({}));
-      if (res.ok) {
-        setStatus({ type: 'ok', msg: 'Mensagem enviada com sucesso! Em breve retornaremos.' });
-        setForm(initialForm);
-      } else {
-        setStatus({ type: 'error', msg: data.error || 'Erro ao enviar a mensagem.' });
-      }
-    } catch {
-      setStatus({ type: 'error', msg: 'Erro ao enviar. Verifique sua conexão.' });
-    }
+    const msg = `Olá! Meu nome é ${form.nome} (${form.email}).\n\n${form.mensagem}`;
+    window.open(buildWhatsAppUrl(msg), '_blank', 'noopener,noreferrer');
+    setStatus('Abrindo o WhatsApp para você enviar a mensagem…');
+    setForm(initialForm);
   };
 
   return (
@@ -46,8 +31,8 @@ export default function Contato() {
       <div className={styles.left}>
         <h2>Entre em Contato</h2>
         <p>
-          Estamos aqui para ajudar! Conecte-se conosco através das redes sociais ou preencha o
-          formulário ao lado para nos enviar uma mensagem.
+          Estamos aqui para ajudar! Fale com a gente pelo WhatsApp ou redes sociais, ou preencha o
+          formulário ao lado — ele abre uma conversa no nosso WhatsApp com a sua mensagem pronta.
         </p>
 
         <div className={styles.social}>
@@ -114,14 +99,10 @@ export default function Contato() {
               required
             />
           </div>
-          <button type="submit" className={styles.submit} disabled={sending}>
-            {sending ? 'Enviando...' : 'Enviar'}
+          <button type="submit" className={styles.submit}>
+            <FaWhatsapp aria-hidden="true" /> Enviar pelo WhatsApp
           </button>
-          {status && status.type !== 'loading' && (
-            <p className={`${styles.status} ${status.type === 'ok' ? styles.ok : styles.error}`}>
-              {status.msg}
-            </p>
-          )}
+          {status && <p className={styles.status}>{status}</p>}
         </form>
       </div>
     </div>

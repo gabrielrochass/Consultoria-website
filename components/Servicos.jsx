@@ -44,8 +44,13 @@ export default function Servicos() {
     <section id="servicos" className={styles.section}>
       <h2 className={styles.heading}>Nossos Serviços</h2>
       <div className={styles.grid}>
-        {servicos.map((s) => (
-          <article key={s.title} className={styles.card}>
+        {servicos.map((s, i) => (
+          <article
+            key={s.title}
+            className={styles.card}
+            data-aos="fade-up"
+            data-aos-delay={(i % 3) * 100}
+          >
             <div className={styles.imgBox}>
               <img src={s.img} alt={s.alt} loading="lazy" decoding="async" />
             </div>

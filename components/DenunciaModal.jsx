@@ -1,14 +1,15 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
+import { buildWhatsAppUrl } from '@/lib/whatsapp';
 import styles from './DenunciaModal.module.css';
 
 const initialForm = { nome: '', email: '', assunto: '', descricao: '' };
 
 export default function DenunciaModal({ isOpen, onClose }) {
   const [form, setForm] = useState(initialForm);
-  const [status, setStatus] = useState(null);
-  const sending = status?.type === 'loading';
+  const [status, setStatus] = useState('');
 
   useEffect(() => {
     if (!isOpen) return undefined;
@@ -25,29 +26,21 @@ export default function DenunciaModal({ isOpen, onClose }) {
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus({ type: 'loading', msg: 'Enviando...' });
-    try {
-      const res = await fetch('/api/denuncia', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
-      const data = await res.json().catch(() => ({}));
-      if (res.ok) {
-        setStatus({ type: 'ok', msg: 'Denúncia enviada com sucesso!' });
-        setForm(initialForm);
-        setTimeout(() => {
-          onClose();
-          setStatus(null);
-        }, 2000);
-      } else {
-        setStatus({ type: 'error', msg: data.error || 'Erro ao enviar a denúncia.' });
-      }
-    } catch {
-      setStatus({ type: 'error', msg: 'Erro ao enviar. Verifique sua conexão.' });
-    }
+    const msg =
+      `*Canal de Denúncias*\n\n` +
+      `Identificação: ${form.nome || 'Anônimo'}\n` +
+      `E-mail: ${form.email || 'Não informado'}\n` +
+      `Assunto: ${form.assunto}\n\n` +
+      `Descrição:\n${form.descricao}`;
+    window.open(buildWhatsAppUrl(msg), '_blank', 'noopener,noreferrer');
+    setStatus('Abrindo o WhatsApp para enviar sua denúncia…');
+    setForm(initialForm);
+    setTimeout(() => {
+      onClose();
+      setStatus('');
+    }, 1500);
   };
 
   if (!isOpen) return null;
@@ -112,14 +105,10 @@ export default function DenunciaModal({ isOpen, onClose }) {
               required
             />
           </div>
-          <button type="submit" className={styles.submit} disabled={sending}>
-            {sending ? 'Enviando...' : 'Enviar Denúncia'}
+          <button type="submit" className={styles.submit}>
+            <FaWhatsapp aria-hidden="true" /> Enviar pelo WhatsApp
           </button>
-          {status && status.type !== 'loading' && (
-            <p className={`${styles.status} ${status.type === 'ok' ? styles.ok : styles.error}`}>
-              {status.msg}
-            </p>
-          )}
+          {status && <p className={styles.status}>{status}</p>}
         </form>
       </div>
     </div>
