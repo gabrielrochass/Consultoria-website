@@ -1,0 +1,104 @@
+.section {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.heading {
+  font-size: 3rem;
+  color: var(--ink);
+  display: inline-block;
+  border-bottom: 3px solid var(--gold);
+  padding-bottom: 0.4em;
+  margin-bottom: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-left: 4px solid var(--gold);
+  border-radius: 12px;
+  width: 320px;
+  max-width: 100%;
+  text-align: left;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+}
+
+.card:active {
+  transform: scale(0.99);
+}
+
+.imgBox {
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+}
+
+.imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .imgBox img {
+  transform: scale(1.08);
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+.content h3 {
+  font-size: 1.5rem;
+  color: var(--ink-3);
+  margin-bottom: 0.9rem;
+  position: relative;
+  padding-bottom: 0.6rem;
+}
+
+.content h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--gold);
+}
+
+.content p {
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.9rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+}

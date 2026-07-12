@@ -1,24 +1,25 @@
-# dependencies (qualquer profundidade: raiz, meu-projeto, backend)
+# dependencies
 node_modules/
 .pnp
 .pnp.js
 
-# build de produção
+# next.js
+.next/
+out/
 build/
+next-env.d.ts
 
-# variáveis de ambiente com segredos (mantém .env.production/.development versionados)
+# variáveis de ambiente (segredos) — .env.example fica versionado
 .env
-.env.local
-.env.*.local
+.env*.local
 
-# uploads gerados pelo usuário (podem conter PII)
-meu-projeto/backend/uploads/
-
-# testing
-coverage/
+# vercel
+.vercel
 
 # misc
 .DS_Store
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.claude/
