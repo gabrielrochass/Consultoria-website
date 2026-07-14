@@ -6,7 +6,7 @@ const servicos = [
     focal: 'center 30%',
     alt: 'Equipe de copa e cozinha da SM Terceirização',
     title: 'Copa e Cozinha',
-    text: 'Preparo e distribuição de refeições com higiene, organização e pontualidade — cuidamos da copa, cozinha e do apoio à nutrição em hospitais, empresas e instituições.',
+    text: 'Preparo e distribuição de refeições com higiene, organização e pontualidade. Cuidamos da copa, cozinha e do apoio à nutrição em hospitais, empresas e instituições.',
   },
   {
     img: '/images/limp_predial.webp',
