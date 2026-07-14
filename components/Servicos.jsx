@@ -2,37 +2,43 @@ import styles from './Servicos.module.css';
 
 const servicos = [
   {
-    img: '/images/solange3.webp',
-    alt: 'Consultoria em gestão empresarial',
-    title: 'Consultoria em Gestão de Contratos',
-    text: 'Assessoria especializada na gestão de contratos, incluindo elaboração, controle, repactuação, reajuste e renovação, otimizando os resultados para sua empresa.',
+    img: '/images/copa.webp',
+    focal: 'center 30%',
+    alt: 'Equipe de copa e cozinha da SM Terceirização',
+    title: 'Copa e Cozinha',
+    text: 'Preparo e distribuição de refeições com higiene, organização e pontualidade. Cuidamos da copa, cozinha e do apoio à nutrição em hospitais, empresas e instituições.',
   },
   {
     img: '/images/limp_predial.webp',
+    focal: 'center 22%',
     alt: 'Limpeza Predial',
     title: 'Limpeza Predial',
     text: 'Oferecemos serviços de limpeza e conservação para ambientes comerciais, industriais, e condomínios, com métodos eficazes e produtos de qualidade.',
   },
   {
-    img: '/images/portaria.webp',
+    img: '/images/porteiro.webp',
+    focal: 'center 28%',
     alt: 'Portaria',
     title: 'Portaria',
     text: 'Controle de acesso e organização de entradas e saídas de forma ágil e segura, com porteiros qualificados para garantir a ordem e o bom funcionamento do seu condomínio ou empresa.',
   },
   {
-    img: '/images/porteiro.webp',
-    alt: 'Recepção',
-    title: 'Recepção',
-    text: 'Oferecemos um atendimento de qualidade aos seus clientes e visitantes com nossa equipe de recepcionistas, que cuidam da recepção, telefonia e organização de agendas com eficiência e cordialidade.',
+    img: '/images/flebotomista.webp',
+    focal: 'center 25%',
+    alt: 'Flebotomista',
+    title: 'Flebotomista',
+    text: 'Profissionais capacitados na coleta de material biológico, com técnica, segurança e cuidado com o paciente, seguindo rigorosos protocolos de biossegurança.',
   },
   {
-    img: '/images/hosp.webp',
+    img: '/images/limpeza-hosp.webp',
+    focal: 'center 30%',
     alt: 'Limpeza Hospitalar',
     title: 'Limpeza Hospitalar',
     text: 'Garantimos um ambiente seguro e livre de contaminações em hospitais e clínicas, seguindo protocolos rigorosos de higiene para a segurança de pacientes e profissionais de saúde.',
   },
   {
     img: '/images/esp2.webp',
+    focal: 'center',
     alt: 'Serviços Especializados',
     title: 'Serviços Especializados',
     text: 'Oferecemos serviços especializados como apoio técnico, assessoria, coordenadoria, manutenção predial e outros serviços personalizados para garantir a excelência no funcionamento da sua empresa.',
@@ -52,7 +58,13 @@ export default function Servicos() {
             data-aos-delay={(i % 3) * 100}
           >
             <div className={styles.imgBox}>
-              <img src={s.img} alt={s.alt} loading="lazy" decoding="async" />
+              <img
+                src={s.img}
+                alt={s.alt}
+                loading="lazy"
+                decoding="async"
+                style={{ objectPosition: s.focal }}
+              />
             </div>
             <div className={styles.content}>
               <h3>{s.title}</h3>

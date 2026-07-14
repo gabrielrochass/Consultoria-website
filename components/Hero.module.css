@@ -10,7 +10,7 @@
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
+  background-position: var(--focal, center);
   transform: scale(1.05);
   opacity: 0;
   transition: opacity 1.5s ease-in-out, transform 6s ease-in-out;
@@ -109,6 +109,10 @@
 }
 
 @media (max-width: 768px) {
+  .slide {
+    background-position: var(--focal-m, center);
+  }
+
   .content {
     bottom: 16%;
     left: 5%;
