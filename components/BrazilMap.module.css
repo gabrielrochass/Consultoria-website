@@ -26,21 +26,3 @@
   stroke-width: 1;
 }
 
-.caption {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1.1rem;
-  color: var(--ink-2);
-}
-
-.caption strong {
-  color: var(--brown);
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--gold);
-}

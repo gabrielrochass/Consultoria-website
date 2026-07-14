@@ -1,30 +1,22 @@
+import { Resvg } from '@resvg/resvg-js';
 import sharp from 'sharp';
-import { statSync } from 'node:fs';
+import { readFileSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const imagesDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'public', 'images');
 
-const jobs = [
-  { src: 'copa.jpeg', out: 'copa.webp', width: 860 },
-  { src: 'flebotomista.jpeg', out: 'flebotomista.webp', width: 860 },
-  { src: 'limpeza-hosp.jpeg', out: 'limpeza-hosp.webp', width: 860 },
-  { src: 'galeria1.jpeg', out: 'galeria1.webp', width: 1100 },
-  { src: 'galeria2.jpeg', out: 'galeria2.webp', width: 1100 },
-  { src: 'galeria3.jpeg', out: 'galeria3.webp', width: 1100 },
-  { src: 'galeria4.jpeg', out: 'galeria4.webp', width: 1100 },
-];
+// O banner veio como SVG (57MB) com várias imagens em base64 + filtros/máscaras.
+// O librsvg (sharp) estoura o parser; o resvg renderiza o SVG composto e o
+// sharp grava um WebP de tamanho normal.
+const src = join(imagesDir, 'banner-source.svg');
+const out = join(imagesDir, 'banner.webp');
 
-for (const { src, out, width } of jobs) {
-  const srcPath = join(imagesDir, src);
-  const outPath = join(imagesDir, out);
-  const meta = await sharp(srcPath).metadata();
-  await sharp(srcPath)
-    .rotate()
-    .resize({ width, withoutEnlargement: true })
-    .webp({ quality: 80 })
-    .toFile(outPath);
-  const inKb = (statSync(srcPath).size / 1024).toFixed(0);
-  const outKb = (statSync(outPath).size / 1024).toFixed(0);
-  console.log(`${src.padEnd(20)} ${meta.width}x${meta.height}  ${inKb}KB -> ${out} ${outKb}KB`);
-}
+const svg = readFileSync(src);
+const png = new Resvg(svg, { fitTo: { mode: 'width', value: 2000 } }).render().asPng();
+await sharp(png).webp({ quality: 82 }).toFile(out);
+
+const meta = await sharp(out).metadata();
+const inMb = (statSync(src).size / 1024 / 1024).toFixed(1);
+const outKb = (statSync(out).size / 1024).toFixed(0);
+console.log(`banner-source.svg ${inMb}MB -> banner.webp ${meta.width}x${meta.height} ${outKb}KB`);

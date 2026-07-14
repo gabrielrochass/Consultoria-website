@@ -20,10 +20,6 @@ export default function BrazilMap() {
           />
         ))}
       </svg>
-      <figcaption className={styles.caption}>
-        <span className={styles.dot} aria-hidden="true" />
-        Estamos em <strong>Pernambuco</strong>
-      </figcaption>
     </figure>
   );
 }

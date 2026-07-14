@@ -6,7 +6,9 @@ import styles from './Hero.module.css';
 const slides = [
   {
     id: 1,
-    image: '/images/capaa.webp',
+    image: '/images/banner.webp',
+    focal: 'center',
+    focalMobile: '88% center',
     title: 'Soluções Eficientes para o seu Negócio',
     description:
       'Oferecemos serviços terceirizados com excelência, agilidade e a confiança que sua empresa merece. Soluções personalizadas em terceirização de mão de obra e consultoria empresarial podem elevar o desempenho do seu negócio.',
@@ -14,6 +16,8 @@ const slides = [
   {
     id: 2,
     image: '/images/capa2.webp',
+    focal: 'center',
+    focalMobile: 'center',
     title: 'Equipe Especializada',
     description:
       'Contamos com profissionais capacitados e comprometidos em oferecer soluções de alta qualidade. Com treinamento constante e foco em eficiência, nossa equipe está preparada para atender às suas necessidades.',
@@ -21,6 +25,8 @@ const slides = [
   {
     id: 3,
     image: '/images/seguranca2.webp',
+    focal: 'center',
+    focalMobile: '85% center',
     title: 'Segurança e Bem-estar no seu Ambiente de Trabalho',
     description:
       'Com a SM Terceirização e Serviços, você tem a confiança de que sua equipe está sendo cuidada em todos os aspectos, com soluções personalizadas para garantir a segurança, o bem-estar e a proteção do colaborador no ambiente de trabalho.',
@@ -28,6 +34,8 @@ const slides = [
   {
     id: 4,
     image: '/images/resp.webp',
+    focal: 'center',
+    focalMobile: '68% center',
     title: 'Responsabilidade Social',
     description:
       'Estamos focados em adotar práticas que promovam o bem-estar das pessoas e a sustentabilidade, valorizando nossos colaboradores e o ambiente.',
@@ -35,6 +43,8 @@ const slides = [
   {
     id: 5,
     image: '/images/capa4.webp',
+    focal: 'center',
+    focalMobile: '80% center',
     title: 'Consultoria em Gestão de Contratos',
     description:
       'Nossos consultores garantem a gestão eficiente, cumprimento de prazos e conformidade legal em cada etapa do processo, desde a elaboração até a renovação.',
@@ -69,7 +79,15 @@ export default function Hero() {
         <div
           key={slide.id}
           className={`${styles.slide} ${i === current ? styles.active : ''}`}
-          style={loaded.has(i) ? { backgroundImage: `url(${slide.image})` } : undefined}
+          style={
+            loaded.has(i)
+              ? {
+                  backgroundImage: `url(${slide.image})`,
+                  '--focal': slide.focal,
+                  '--focal-m': slide.focalMobile,
+                }
+              : undefined
+          }
         >
           {i === current && (
             <div className={styles.content}>
