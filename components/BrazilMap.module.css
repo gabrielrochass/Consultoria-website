@@ -1,0 +1,46 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  margin: 0;
+}
+
+.map {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+}
+
+.state {
+  fill: #e9e4da;
+  stroke: #fff;
+  stroke-width: 0.8;
+  transition: fill 0.3s ease;
+}
+
+.pe {
+  fill: var(--gold);
+  stroke: #fff;
+  stroke-width: 1;
+}
+
+.caption {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--ink-2);
+}
+
+.caption strong {
+  color: var(--brown);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+}

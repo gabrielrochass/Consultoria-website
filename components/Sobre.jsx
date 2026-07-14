@@ -1,3 +1,4 @@
+import BrazilMap from './BrazilMap';
 import styles from './Sobre.module.css';
 
 export default function Sobre() {
@@ -27,7 +28,7 @@ export default function Sobre() {
           </a>
         </div>
         <div className={styles.image}>
-          <img src="/images/sobre2.webp" alt="Equipe SM Terceirização" loading="lazy" decoding="async" />
+          <BrazilMap />
         </div>
       </div>
     </section>
